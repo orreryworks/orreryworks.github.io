@@ -1,0 +1,16 @@
+[book]
+title = "Orrery Documentation"
+authors = ["Foad Nosrati Habibi"]
+description = "Documentation for the Orrery diagram language"
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "coal"
+preferred-dark-theme = "coal"
+git-repository-url = "https://github.com/orreryworks/orreryworks.github.io"
+edit-url-template = "https://github.com/orreryworks/orreryworks.github.io/edit/main/docs/{path}"
+site-url = "/docs/"

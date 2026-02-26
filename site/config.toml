@@ -1,0 +1,58 @@
+base_url = "https://orreryworks.github.io"
+title = "Orrery"
+description = "A diagram language for creating component and sequence diagrams from simple text"
+default_language = "en"
+theme = "tabi"
+
+generate_feeds = true
+compile_sass = true
+minify_html = false
+build_search_index = true
+
+taxonomies = [{ name = "tags", feed = true }]
+
+[markdown.highlighting]
+style = "inline"
+theme = "catppuccin-frappe"
+
+[extra]
+# Theme
+theme_switcher = true
+default_theme = "dark"
+browser_theme_color = "#087e96"
+skin = ""
+
+# Navigation
+[[extra.menu]]
+name = "Docs"
+url = "/docs/"
+
+[[extra.menu]]
+name = "Blog"
+url = "/blog/"
+
+[[extra.menu]]
+name = "Examples"
+url = "/examples/"
+
+# Social / Links
+socials = [
+    { name = "github", url = "https://github.com/orreryworks/orrery", icon = "github" },
+]
+
+# Features
+copy_button = true
+show_reading_time = true
+show_date = true
+toc = true
+
+# Remote repository
+remote_repository_url = "https://github.com/orreryworks/orreryworks.github.io"
+show_remote_source = false
+
+# Footer
+footer_menu = [
+    { url = "https://crates.io/crates/orrery", name = "crates.io" },
+    { url = "https://docs.rs/orrery", name = "docs.rs" },
+    { url = "https://github.com/orreryworks/orrery", name = "GitHub" },
+]

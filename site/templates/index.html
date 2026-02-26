@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="hero">
+    <div class="hero-text">
+        <h1>Software architecture diagrams<br>from simple text.</h1>
+        <p class="hero-subtitle">
+            Orrery is a diagram language for creating component and sequence diagrams.
+            Write text, get SVGs.
+        </p>
+        <div class="hero-actions">
+            <code class="install-cmd">cargo install orrery-cli</code>
+            <a href="/docs/getting-started/installation.html" class="btn btn-primary">Get Started</a>
+            <a href="https://github.com/orreryworks/orrery" class="btn btn-secondary">GitHub</a>
+        </div>
+    </div>
+</section>
+
+<section class="demo">
+    <h2>See it in action</h2>
+    <div class="demo-panel">
+        <div class="demo-source">
+            <div class="demo-label">input.orr</div>
+            <pre><code>diagram component;
+
+type Service = Rectangle [fill_color="#e6f3ff"];
+type Database = Rectangle [fill_color="#e0f0e0"];
+
+api as "API Gateway": Service;
+auth as "Auth Service": Service;
+db as "Users DB": Database;
+
+api -&gt; auth: "Verify";
+auth -&gt; db: "Query";
+db -&gt; auth: "Result";
+auth -&gt; api: "Token";</code></pre>
+        </div>
+        <div class="demo-arrow">&#8594;</div>
+        <div class="demo-output">
+            <div class="demo-label">output.svg</div>
+            <img src="/diagrams/hero-component.svg" alt="Rendered component diagram showing API Gateway, Auth Service, and Users DB with relations">
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Why Orrery?</h2>
+    <div class="features-grid">
+        <div class="feature">
+            <h3>Text-based &amp; version-controllable</h3>
+            <p>Diagrams live in <code>.orr</code> files alongside your code. Diff, review, and merge them like any source file.</p>
+        </div>
+        <div class="feature">
+            <h3>Component &amp; sequence diagrams</h3>
+            <p>Model system architecture with component diagrams and interaction flows with sequence diagrams.</p>
+        </div>
+        <div class="feature">
+            <h3>Type system for reusable styles</h3>
+            <p>Define types once, apply everywhere. Custom shapes, colors, and styling inherit through a composable type system.</p>
+        </div>
+        <div class="feature">
+            <h3>Clean SVG output</h3>
+            <p>Renders to standard SVG. Embed in documentation, wikis, or anywhere that accepts images.</p>
+        </div>
+    </div>
+</section>
+
+<section class="links-section">
+    <div class="links-grid">
+        <a href="/docs/getting-started/installation.html" class="link-card">
+            <h3>Getting Started</h3>
+            <p>Install the CLI and create your first diagram.</p>
+        </a>
+        <a href="/docs/reference/specification.html" class="link-card">
+            <h3>Language Reference</h3>
+            <p>Complete specification of the Orrery language.</p>
+        </a>
+        <a href="https://docs.rs/orrery" class="link-card">
+            <h3>API Documentation</h3>
+            <p>Use Orrery as a Rust library in your projects.</p>
+        </a>
+        <a href="https://github.com/orreryworks/orrery/tree/main/examples" class="link-card">
+            <h3>Examples</h3>
+            <p>Browse example diagrams on GitHub.</p>
+        </a>
+    </div>
+</section>
+{% endblock main_content %}
