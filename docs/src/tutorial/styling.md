@@ -85,7 +85,7 @@ type Service = Rectangle [fill_color="#e6f3ff", text=HeaderText];
 
 ## Styling components
 
-```text
+```orrery
 diagram component;
 
 type Service = Rectangle [

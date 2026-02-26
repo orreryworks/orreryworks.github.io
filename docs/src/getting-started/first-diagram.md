@@ -6,7 +6,7 @@ Let's create a simple component diagram and render it to SVG.
 
 Create a file called `hello.orr` with the following content:
 
-```text
+```orrery
 diagram component;
 
 client: Oval;
@@ -36,7 +36,7 @@ Open `hello.svg` in a browser or image viewer. You should see a diagram with thr
 
 Now let's improve the diagram with custom types:
 
-```text
+```orrery
 diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
@@ -70,7 +70,7 @@ The output now shows colored, rounded shapes with descriptive labels.
 
 Change the diagram type to `sequence`:
 
-```text
+```orrery
 diagram sequence;
 
 type Service = Rectangle [fill_color="#e6f3ff"];

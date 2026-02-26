@@ -31,14 +31,19 @@ jobs:
       - name: Install mdBook
         uses: taiki-e/install-action@v2
         with:
-          tool: mdbook@0.4.40
+          tool: mdbook@0.5.2
+
+      - name: Install Orrery CLI
+        run: cargo install orrery-cli --locked
 
       - name: Build Zola site
         run: zola build
         working-directory: site
 
       - name: Build mdBook
-        run: mdbook build
+        run: |
+          chmod +x ../tools/mdbook-orrery
+          mdbook build
         working-directory: docs
 
       - name: Merge outputs

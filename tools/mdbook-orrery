@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""mdBook preprocessor that renders ```orrery code blocks to SVG.
+
+Code blocks fenced with ```orrery that begin with a `diagram` declaration are:
+1. Rendered to SVG via the orrery CLI
+2. Displayed as source code (converted to ```text)
+3. Followed by the rendered SVG image
+
+Code blocks that don't start with `diagram` are left as ```text for display.
+
+SVGs are cached by content hash in src/diagrams/ to avoid re-rendering
+unchanged diagrams.
+"""
+
+import hashlib
+import json
+import os
+import re
+import subprocess
+import sys
+import tempfile
+
+FENCE_PATTERN = re.compile(r"```orrery\n(.*?)```", re.DOTALL)
+DIAGRAM_DECL = re.compile(r"^\s*diagram\s+")
+DIAGRAMS_DIR = "diagrams"
+
+
+def supports(renderer):
+    return renderer == "html"
+
+
+def render_to_svg(code, svg_path):
+    """Render Orrery source code to an SVG file."""
+    with tempfile.NamedTemporaryFile(
+        mode="w", suffix=".orr", delete=False
+    ) as tmp:
+        tmp.write(code)
+        tmp_path = tmp.name
+
+    try:
+        result = subprocess.run(
+            ["orrery", tmp_path, "-o", svg_path],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            print(
+                f"[mdbook-orrery] render failed: {result.stderr.strip().split(chr(10))[-1]}",
+                file=sys.stderr,
+            )
+            return False
+        return True
+    finally:
+        os.unlink(tmp_path)
+
+
+def process_chapter(chapter, src_dir):
+    """Find ```orrery blocks, render them, and insert SVG images."""
+    content = chapter.get("content", "")
+    if not content or "```orrery" not in content:
+        return
+
+    chapter_path = chapter.get("path", "")
+    # Compute relative path from chapter to diagrams/
+    depth = chapter_path.count("/")
+    rel_prefix = "../" * depth if depth > 0 else ""
+
+    diagrams_abs = os.path.join(src_dir, DIAGRAMS_DIR)
+    os.makedirs(diagrams_abs, exist_ok=True)
+
+    def replace_block(match):
+        code = match.group(1)
+
+        # Only render blocks that start with a diagram declaration
+        if not DIAGRAM_DECL.match(code):
+            return f"```text\n{code}```"
+
+        code_hash = hashlib.sha256(code.encode()).hexdigest()[:16]
+        svg_name = f"orr-{code_hash}.svg"
+        svg_path = os.path.join(diagrams_abs, svg_name)
+
+        # Render if not cached
+        if not os.path.exists(svg_path):
+            if not render_to_svg(code, svg_path):
+                # On failure, just show the code block without image
+                return f"```text\n{code}```"
+
+        rel_path = f"{rel_prefix}{DIAGRAMS_DIR}/{svg_name}"
+        return f"```text\n{code}```\n\n![Rendered diagram]({rel_path})"
+
+    chapter["content"] = FENCE_PATTERN.sub(replace_block, content)
+
+
+def walk_items(items, src_dir):
+    """Recursively process all chapters."""
+    for item in items:
+        if "Chapter" in item:
+            chapter = item["Chapter"]
+            process_chapter(chapter, src_dir)
+            walk_items(chapter.get("sub_items", []), src_dir)
+
+
+def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "supports":
+        renderer = sys.argv[2] if len(sys.argv) > 2 else ""
+        sys.exit(0 if supports(renderer) else 1)
+
+    context, book = json.load(sys.stdin)
+    src_dir = os.path.join(
+        context["root"], context["config"]["book"].get("src", "src")
+    )
+
+    # mdBook >=0.5 uses "items", older versions use "sections"
+    items = book.get("items") or book.get("sections") or []
+    walk_items(items, src_dir)
+
+    json.dump(book, sys.stdout)
+
+
+if __name__ == "__main__":
+    main()

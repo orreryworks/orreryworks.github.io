@@ -12,7 +12,7 @@ All source files are available in the [examples directory on GitHub](https://git
 
 Custom participant types, arrow types, self-messages, and all four relation directions.
 
-```text
+```orrery
 diagram sequence;
 
 type Participant = Rectangle[fill_color="#e6f3ff", stroke=[color="#336699"]];
@@ -47,7 +47,7 @@ api -> @ErrorArrow client: "400 Bad Request";
 
 Block-form activation, nested activation, stacked activation, explicit activate/deactivate statements, and custom activation types.
 
-```text
+```orrery
 diagram sequence;
 
 type Participant = Rectangle[fill_color="#e6f3ff", stroke=[color="#336699"]];
@@ -107,7 +107,7 @@ activate @CriticalActivation api {
 
 All fragment keywords (alt/else, opt, loop, par, break, critical), nested fragments with activation, and custom fragment styling.
 
-```text
+```orrery
 diagram sequence;
 
 type Participant = Rectangle[fill_color="#e6f3ff", stroke=[color="#336699"]];

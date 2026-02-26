@@ -1,0 +1,9 @@
+/* Light box for rendered diagrams — ensures visibility on dark themes */
+img[alt="Rendered diagram"] {
+    background-color: #e8e8e8;
+    border: 1px solid #c0c0c0;
+    border-radius: 6px;
+    padding: 16px;
+    display: block;
+    max-width: 100%;
+}

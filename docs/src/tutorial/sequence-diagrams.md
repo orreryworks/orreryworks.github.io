@@ -4,7 +4,7 @@ Sequence diagrams model interactions between participants over time. Messages fl
 
 ## Basic structure
 
-```text
+```orrery
 diagram sequence;
 
 client: Rectangle;
@@ -23,7 +23,7 @@ Participants are arranged horizontally. Each has a lifeline extending downward, 
 
 Participants are declared the same way as components — with an identifier, optional display name, and a type:
 
-```text
+```orrery
 diagram sequence;
 
 type Service = Rectangle [fill_color="#e6f3ff", stroke=[color="#336699"]];
@@ -60,7 +60,7 @@ api -> api: "Rate limit check";
 
 Activation marks when a participant is actively processing. Use the block form to group related messages:
 
-```text
+```orrery
 diagram sequence;
 
 client: Rectangle;

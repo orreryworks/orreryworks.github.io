@@ -6,7 +6,7 @@ Component diagrams visualize the structure of a system — its parts and how the
 
 Every component diagram starts with a `diagram component;` declaration, followed by component definitions and relations.
 
-```text
+```orrery
 diagram component;
 
 frontend: Rectangle;
@@ -34,7 +34,7 @@ Each component needs a name and a shape type. The built-in shape types are:
 
 By default, the identifier is used as the label. Use `as "..."` to set a different display name:
 
-```text
+```orrery
 diagram component;
 
 fe as "Frontend App": Rectangle;
@@ -49,7 +49,7 @@ be -> db;
 
 Define reusable types to avoid repeating attributes:
 
-```text
+```orrery
 diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
@@ -74,7 +74,7 @@ type CriticalService = Service [fill_color="#ffe0e0", stroke=[color="red", width
 
 Components can contain other components, creating a hierarchy:
 
-```text
+```orrery
 diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
@@ -106,7 +106,7 @@ platform: Rectangle [fill_color="#fafafa"] {
 
 Use `::` to reference components inside nested containers:
 
-```text
+```orrery
 diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
@@ -156,7 +156,7 @@ The layout engine can also be set in a [configuration file](../reference/configu
 
 A component can contain an entirely different diagram type inside it:
 
-```text
+```orrery
 diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff"];

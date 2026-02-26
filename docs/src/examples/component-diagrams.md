@@ -12,7 +12,7 @@ All source files are available in the [examples directory on GitHub](https://git
 
 Custom types, display names, and all four relation types.
 
-```text
+```orrery
 diagram component [background_color="#f8f8f8"];
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
@@ -41,7 +41,7 @@ api -> cache;
 
 Content-supporting shapes (Rectangle, Oval, Component) and content-free shapes (Actor, Entity, Control, Interface, Boundary).
 
-```text
+```orrery
 diagram component;
 
 // Content-supporting shapes
@@ -76,7 +76,7 @@ oval -> comp;
 
 Multi-level hierarchy with `::` syntax for cross-level references.
 
-```text
+```orrery
 diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];

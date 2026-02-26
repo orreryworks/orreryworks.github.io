@@ -8,7 +8,11 @@ src = "src"
 [build]
 build-dir = "book"
 
+[preprocessor.orrery]
+command = "../tools/mdbook-orrery"
+
 [output.html]
+additional-css = ["custom.css"]
 default-theme = "coal"
 preferred-dark-theme = "coal"
 git-repository-url = "https://github.com/orreryworks/orreryworks.github.io"
