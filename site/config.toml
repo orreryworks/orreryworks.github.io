@@ -16,6 +16,9 @@ style = "inline"
 theme = "catppuccin-frappe"
 
 [extra]
+# Stylesheets
+stylesheets = ["custom.css"]
+
 # Theme
 theme_switcher = true
 default_theme = "dark"

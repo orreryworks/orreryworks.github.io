@@ -1,0 +1,76 @@
+<svg height="454.8275" viewBox="0 0 1394.3423 454.8275" width="1394.3423" xmlns="http://www.w3.org/2000/svg">
+<rect fill="rgb(248.00002, 248.00002, 248.00002)" fill-opacity="1" height="454.8275" width="1394.3423" x="0" y="0"/>
+<defs>
+<marker id="arrow-left-black" markerHeight="6" markerWidth="6" orient="auto" refX="1" refY="5" viewBox="0 0 10 10">
+<path d="M 10 0 L 0 5 L 10 10 z" fill="black" fill-opacity="1"/>
+</marker>
+<marker id="arrow-right-black" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="black" fill-opacity="1"/>
+</marker>
+</defs>
+<g transform="translate(50, 50)">
+<g>
+<g>
+<g data-layer="content">
+<ellipse cx="137.6818" cy="52.222797" fill="rgb(255, 240.00002, 224.00002)" fill-opacity="1" rx="136.6818" ry="51.222797" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="10" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="164.22673" x="803.69116" y="130.9425"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="123.23572" x="824.18665" y="260.885"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="186.42694" x="452.75455" y="1"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="183.1052" x="794.2519" y="1"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="10" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="155.3525" x="1137.9897" y="1"/>
+</g>
+<g data-layer="arrow">
+<path d="M 275.29883 50.621243 L 451.75455 48.567688" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 275.29883 50.621243 L 451.75455 48.567688" fill="none" marker-start="url(#arrow-left-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 640.1815 47.471252 L 793.2519 47.471252" fill="none" marker-end="url(#arrow-right-black)" marker-start="url(#arrow-left-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 1136.9897 78.46423 L 968.91785 144.67288" fill="none" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 978.3571 47.471252 L 1136.9897 47.471252" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 640.1815 83.49545 L 802.69116 145.6339" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 608.0434 94.942505 L 823.7291 259.885" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="137.6818" y="29.280293">
+
+<tspan dy="22.942501" x="137.6818">Web Application</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="885.8045" y="154.47125">
+
+<tspan dy="22.942501" x="885.8045">Orders DB</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="885.8045" y="284.41376">
+
+<tspan dy="22.942501" x="885.8045">cache</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="545.968" y="24.528751">
+
+<tspan dy="22.942501" x="545.968">API Gateway</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="885.8045" y="24.528751">
+
+<tspan dy="22.942501" x="885.8045">Auth Service</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1215.666" y="24.528751">
+
+<tspan dy="22.942501" x="1215.666">Users DB</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="363.52667" y="26.651966">
+
+<tspan dy="22.942501" x="363.52667">HTTP request</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="363.52667" y="26.651966">
+
+<tspan dy="22.942501" x="363.52667">Push notification</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="716.7167" y="24.528751">
+
+<tspan dy="22.942501" x="716.7167">Verify / Result</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1052.9539" y="88.62605">
+
+<tspan dy="22.942501" x="1052.9539">Shared cluster</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,349 @@
+<svg height="2342.4136" viewBox="0 0 1304.2495 2342.4136" width="1304.2495" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arrow-right-rgb_204.00002__51.000004__51.000004_" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="rgb(204.00002, 51.000004, 51.000004)" fill-opacity="1"/>
+</marker>
+<marker id="arrow-right-steelblue" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="steelblue" fill-opacity="1"/>
+</marker>
+<marker id="arrow-right-seagreen" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="seagreen" fill-opacity="1"/>
+</marker>
+</defs>
+<g transform="translate(50, 37.471252)">
+<g>
+<g>
+<g data-layer="lifeline">
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="476.73535" x2="476.73535" y1="107.47125" y2="2254.9424"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="945.881" x2="945.881" y1="107.47125" y2="2254.9424"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="1139.4155" x2="1139.4155" y1="107.47125" y2="2254.9424"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="72.583115" x2="72.583115" y1="107.47125" y2="2254.9424"/>
+</g>
+<g data-layer="content">
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="rgb(51.000004, 102.00001, 153)" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="166.45747" x="393.50662" y="13.528748"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="8" stroke="rgb(51.000004, 153, 102.00001)" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="155.40118" x="868.1804" y="13.528748"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="8" stroke="rgb(51.000004, 153, 102.00001)" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="127.66797" x="1075.5815" y="13.528748"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="rgb(51.000004, 102.00001, 153)" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="143.16623" x="1" y="13.528748"/>
+</g>
+<g data-layer="activation">
+<rect fill="white" fill-opacity="1" height="180" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="8" x="472.73535" y="1894.9424"/>
+</g>
+<g data-layer="fragment">
+<rect fill="none" height="520" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="1106.8324" x="52.58313" y="194.9425"/>
+<path d="M 205.46045 194.9425 L 205.46045 211.29651 L 195.46045 221.29651 L 52.58313 221.29651" fill="white" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<line stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="60.58313" x2="1111.4155" y1="461.2965" y2="461.2965"/>
+<rect fill="rgba(255, 220, 220, 0.15)" fill-opacity="0.15" height="280" width="444.15222" x="52.58313" y="674.9425"/>
+<rect fill="none" height="280" stroke="red" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="444.15222" x="52.58313" y="674.9425"/>
+<path d="M 95.43932 674.9425 L 95.43932 691.2965 L 85.43932 701.2965 L 52.58313 701.2965" fill="white" fill-opacity="1" stroke="red" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<line stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="60.58313" x2="448.73535" y1="821.2965" y2="821.2965"/>
+<rect fill="rgba(220, 240, 255, 0.15)" fill-opacity="0.15" height="160" width="702.6802" x="456.73535" y="914.9425"/>
+<rect fill="none" height="160" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="702.6802" x="456.73535" y="914.9425"/>
+<path d="M 504.92194 914.9425 L 504.92194 931.2965 L 494.92194 941.2965 L 456.73535 941.2965" fill="white" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<rect fill="none" height="280" stroke="purple" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="913.29785" x="52.58313" y="1034.9425"/>
+<path d="M 108.75751 1034.9425 L 108.75751 1051.2965 L 98.75751 1061.2965 L 52.58313 1061.2965" fill="white" fill-opacity="1" stroke="purple" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<rect fill="none" height="280" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="702.6802" x="456.73535" y="1274.9425"/>
+<path d="M 505.80255 1274.9425 L 505.80255 1291.2965 L 495.80255 1301.2965 L 456.73535 1301.2965" fill="white" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<line stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="464.73535" x2="1111.4155" y1="1421.2965" y2="1421.2965"/>
+<rect fill="none" height="100" stroke="red" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="444.15222" x="52.58313" y="1514.9425"/>
+<path d="M 118.506516 1514.9425 L 118.506516 1531.2965 L 108.506516 1541.2965 L 52.58313 1541.2965" fill="white" fill-opacity="1" stroke="red" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<rect fill="rgba(255, 255, 200, 0.2)" fill-opacity="0.2" height="280" width="509.14563" x="456.73535" y="1574.9425"/>
+<rect fill="none" height="280" stroke="goldenrod" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="509.14563" x="456.73535" y="1574.9425"/>
+<path d="M 527.95795 1574.9425 L 527.95795 1591.2965 L 517.95795 1601.2965 L 456.73535 1601.2965" fill="white" fill-opacity="1" stroke="goldenrod" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<rect fill="none" height="160" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="509.14563" x="456.73535" y="1874.9425"/>
+<path d="M 527.95795 1874.9425 L 527.95795 1891.2965 L 517.95795 1901.2965 L 456.73535 1901.2965" fill="white" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<rect fill="none" height="100" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="509.14563" x="456.73535" y="1994.9424"/>
+<path d="M 504.92194 1994.9424 L 504.92194 2011.2964 L 494.92194 2021.2964 L 456.73535 2021.2964" fill="white" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<rect fill="none" height="460" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="444.15222" x="52.58313" y="1814.9424"/>
+<path d="M 95.43932 1814.9424 L 95.43932 1831.2964 L 85.43932 1841.2964 L 52.58313 1841.2964" fill="white" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<line stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="60.58313" x2="448.73535" y1="2141.2964" y2="2141.2964"/>
+</g>
+<g data-layer="arrow">
+<path d="M 72.583115 214.9425 L 476.73535 214.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 274.9425 L 1139.4155 274.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 1139.4155 334.9425 L 476.73535 334.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 476.73535 394.9425 L 72.583115 394.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 476.73535 454.9425 L 945.881 454.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 945.881 514.9425 L 476.73535 514.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 476.73535 574.9425 L 1139.4155 574.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 634.9425 L 72.583115 634.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 72.583115 694.9425 L 476.73535 694.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 754.9425 L 72.583115 754.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 72.583115 814.9425 L 476.73535 814.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 874.9425 L 72.583115 874.9425" fill="none" marker-end="url(#arrow-right-rgb_204.00002__51.000004__51.000004_)" stroke="rgb(204.00002, 51.000004, 51.000004)" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<path d="M 476.73535 934.9425 L 1139.4155 934.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 1139.4155 994.9425 L 476.73535 994.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 72.583115 1054.9425 L 476.73535 1054.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 1114.9425 L 945.881 1114.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 945.881 1174.9425 L 476.73535 1174.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 476.73535 1234.9425 L 72.583115 1234.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 476.73535 1294.9425 L 945.881 1294.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 945.881 1354.9425 L 476.73535 1354.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 476.73535 1414.9425 L 1139.4155 1414.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 1139.4155 1474.9425 L 476.73535 1474.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 476.73535 1534.9425 L 72.583115 1534.9425" fill="none" marker-end="url(#arrow-right-rgb_204.00002__51.000004__51.000004_)" stroke="rgb(204.00002, 51.000004, 51.000004)" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<path d="M 476.73535 1594.9425 L 945.881 1594.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 1654.9425 L 945.881 1654.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 1714.9425 L 945.881 1714.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 1774.9425 L 945.881 1774.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 72.583115 1834.9425 L 476.73535 1834.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 480.73535 1894.9425 L 945.881 1894.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 945.881 1954.9425 L 480.73535 1954.9425" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 480.73535 2014.9425 L 945.881 2014.9425" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 472.73535 2074.9424 L 72.583115 2074.9424" fill="none" marker-end="url(#arrow-right-seagreen)" stroke="seagreen" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 72.583115 2134.9424 L 476.73535 2134.9424" fill="none" marker-end="url(#arrow-right-steelblue)" stroke="steelblue" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1.5"/>
+<path d="M 476.73535 2194.9424 L 72.583115 2194.9424" fill="none" marker-end="url(#arrow-right-rgb_204.00002__51.000004__51.000004_)" stroke="rgb(204.00002, 51.000004, 51.000004)" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="476.73535" y="37.0575">
+
+<tspan dy="22.942501" x="476.73535">API Server</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="945.881" y="37.0575">
+
+<tspan dy="22.942501" x="945.881">Database</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1139.4155" y="37.0575">
+
+<tspan dy="22.942501" x="1139.4155">Cache</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="72.583115" y="37.0575">
+
+<tspan dy="22.942501" x="72.583115">Browser</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="124.02179" y="189.7655">
+
+<tspan dy="18.354" x="124.02179">Request Handling</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="250.803" y="191.29501">
+
+<tspan dy="16.8245" x="250.803">[cache hit]</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="115.23353" y="459.88428">
+
+<tspan dy="16.8245" x="115.23353">[cache miss]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="69.01123" y="669.7655">
+
+<tspan dy="18.354" x="69.01123">alt</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="153.38309" y="671.295">
+
+<tspan dy="16.8245" x="153.38309">[valid session]</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="129.47421" y="819.8842">
+
+<tspan dy="16.8245" x="129.47421">[expired session]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="475.82864" y="909.7655">
+
+<tspan dy="18.354" x="475.82864">opt</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="560.41907" y="911.295">
+
+<tspan dy="16.8245" x="560.41907">[cache warm]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="75.67032" y="1029.7655">
+
+<tspan dy="18.354" x="75.67032">loop</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="185.00662" y="1031.295">
+
+<tspan dy="16.8245" x="185.00662">[for each page 1..N]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="476.26895" y="1269.7655">
+
+<tspan dy="18.354" x="476.26895">par</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="575.944" y="1271.295">
+
+<tspan dy="16.8245" x="575.944">[fetch user profile]</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="539.3198" y="1419.8843">
+
+<tspan dy="16.8245" x="539.3198">[fetch preferences]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="80.54482" y="1509.7655">
+
+<tspan dy="18.354" x="80.54482">break</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="195.96646" y="1511.295">
+
+<tspan dy="16.8245" x="195.96646">[rate limit exceeded]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="487.34665" y="1569.7655">
+
+<tspan dy="18.354" x="487.34665">critical</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="609.8933" y="1571.295">
+
+<tspan dy="16.8245" x="609.8933">[payment transaction]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="487.34665" y="1869.7655">
+
+<tspan dy="18.354" x="487.34665">critical</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="611.9221" y="1871.295">
+
+<tspan dy="16.8245" x="611.9221">[inventory reservation]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="475.82864" y="1989.7654">
+
+<tspan dy="18.354" x="475.82864">opt</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="570.58075" y="1991.2949">
+
+<tspan dy="16.8245" x="570.58075">[loyalty member]</tspan>
+</text>
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="69.01123" y="1809.7654">
+
+<tspan dy="18.354" x="69.01123">alt</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="152.16869" y="1811.2949">
+
+<tspan dy="16.8245" x="152.16869">[order placed]</tspan>
+</text>
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="129.07416" y="2139.8843">
+
+<tspan dy="16.8245" x="129.07416">[validation failed]</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="192">
+
+<tspan dy="22.942501" x="274.65924">GET /products</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="808.07544" y="252">
+
+<tspan dy="22.942501" x="808.07544">Lookup key</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="808.07544" y="312">
+
+<tspan dy="22.942501" x="808.07544">Cached response</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="372">
+
+<tspan dy="22.942501" x="274.65924">200 OK</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="432">
+
+<tspan dy="22.942501" x="711.30817">SELECT products</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="492">
+
+<tspan dy="22.942501" x="711.30817">Result set</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="808.07544" y="552">
+
+<tspan dy="22.942501" x="808.07544">SET key</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="612">
+
+<tspan dy="22.942501" x="274.65924">200 OK</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="672">
+
+<tspan dy="22.942501" x="274.65924">Request with JWT</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="732">
+
+<tspan dy="22.942501" x="274.65924">Protected resource</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="792">
+
+<tspan dy="22.942501" x="274.65924">Request with stale JWT</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="852">
+
+<tspan dy="22.942501" x="274.65924">401 Unauthorized</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="808.07544" y="912">
+
+<tspan dy="22.942501" x="808.07544">GET session</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="808.07544" y="972">
+
+<tspan dy="22.942501" x="808.07544">Session data</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="1032">
+
+<tspan dy="22.942501" x="274.65924">GET /items?page=N</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1092">
+
+<tspan dy="22.942501" x="711.30817">SELECT LIMIT 50 OFFSET N</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1152">
+
+<tspan dy="22.942501" x="711.30817">Page rows</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="1212">
+
+<tspan dy="22.942501" x="274.65924">JSON page</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1272">
+
+<tspan dy="22.942501" x="711.30817">SELECT user</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1332">
+
+<tspan dy="22.942501" x="711.30817">User row</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="808.07544" y="1392">
+
+<tspan dy="22.942501" x="808.07544">GET prefs</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="808.07544" y="1452">
+
+<tspan dy="22.942501" x="808.07544">Preferences</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="1512">
+
+<tspan dy="22.942501" x="274.65924">429 Too Many Requests</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1572">
+
+<tspan dy="22.942501" x="711.30817">BEGIN</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1632">
+
+<tspan dy="22.942501" x="711.30817">UPDATE balance</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1692">
+
+<tspan dy="22.942501" x="711.30817">INSERT ledger_entry</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="711.30817" y="1752">
+
+<tspan dy="22.942501" x="711.30817">COMMIT</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="1812">
+
+<tspan dy="22.942501" x="274.65924">POST /order</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="713.30817" y="1872">
+
+<tspan dy="22.942501" x="713.30817">UPDATE stock SET qty = qty - 1</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="713.30817" y="1932">
+
+<tspan dy="22.942501" x="713.30817">Row updated</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="713.30817" y="1992">
+
+<tspan dy="22.942501" x="713.30817">INSERT reward_points</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="272.65924" y="2052">
+
+<tspan dy="22.942501" x="272.65924">201 Created</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="2112">
+
+<tspan dy="22.942501" x="274.65924">POST /order (invalid)</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="274.65924" y="2172">
+
+<tspan dy="22.942501" x="274.65924">422 Unprocessable Entity</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+</svg>

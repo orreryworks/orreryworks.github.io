@@ -1,0 +1,99 @@
+<svg height="614.41376" viewBox="0 0 1406.8257 614.41376" width="1406.8257" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<clipPath id="clip-layer-0">
+<rect height="442.41376" width="637.18335" x="0" y="12.528748"/>
+</clipPath>
+</defs>
+<defs>
+<marker id="arrow-right-black" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="black" fill-opacity="1"/>
+</marker>
+</defs>
+<g transform="translate(50, 62.528748)">
+<g>
+<g>
+<g data-layer="content">
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="512.41376" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="707.18335" x="330.34033" y="-11.528748"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="155.3525" x="1150.4731" y="1"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="186.42694" x="1" y="1"/>
+</g>
+<g data-layer="arrow">
+<path d="M 188.42694 78.977036 L 329.34033 126.099655" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 1038.5237 116.185524 L 1149.4731 75.981" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="683.932" y="-22.999998">
+
+<tspan dy="22.942501" x="683.932">Auth Service</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1228.1494" y="24.528751">
+
+<tspan dy="22.942501" x="1228.1494">Users DB</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="94.21347" y="24.528751">
+
+<tspan dy="22.942501" x="94.21347">API Gateway</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="258.88364" y="79.59584">
+
+<tspan dy="22.942501" x="258.88364">Authenticate</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1093.9984" y="73.14076">
+
+<tspan dy="22.942501" x="1093.9984">Sessions</tspan>
+</text>
+</g>
+</g>
+</g>
+<g clip-path="url(#clip-layer-0)" transform="translate(364.34033, 9.942505)">
+<g>
+<g data-layer="lifeline">
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="322.09363" x2="322.09363" y1="107.47125" y2="454.9425"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="84.24335" x2="84.24335" y1="107.47125" y2="454.9425"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="565.1311" x2="565.1311" y1="107.47125" y2="454.9425"/>
+</g>
+<g data-layer="content">
+<rect fill="white" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="158.74243" x="242.72241" y="13.528748"/>
+<rect fill="white" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="166.4867" x="1" y="13.528748"/>
+<rect fill="white" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="142.10443" x="494.0789" y="13.528748"/>
+</g>
+<g data-layer="arrow">
+<path d="M 84.24335 214.9425 L 322.09363 214.9425" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 322.09363 274.9425 L 565.1311 274.9425" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 565.1311 334.9425 L 322.09363 334.9425" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 322.09363 394.9425 L 84.24335 394.9425" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="322.09363" y="37.0575">
+
+<tspan dy="22.942501" x="322.09363">auth::auth</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="84.24335" y="37.0575">
+
+<tspan dy="22.942501" x="84.24335">auth::client</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="565.1311" y="37.0575">
+
+<tspan dy="22.942501" x="565.1311">auth::db</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="203.16849" y="192">
+
+<tspan dy="22.942501" x="203.16849">Login</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="443.61237" y="252">
+
+<tspan dy="22.942501" x="443.61237">Validate</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="443.61237" y="312">
+
+<tspan dy="22.942501" x="443.61237">Result</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="203.16849" y="372">
+
+<tspan dy="22.942501" x="203.16849">Token</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+</svg>

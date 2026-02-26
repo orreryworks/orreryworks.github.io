@@ -1,0 +1,121 @@
+<svg height="396.885" viewBox="0 0 2489.74 396.885" width="2489.74" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arrow-right-black" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="black" fill-opacity="1"/>
+</marker>
+</defs>
+<g transform="translate(50, 50)">
+<g>
+<g>
+<g data-layer="content">
+<rect fill="rgb(250.00002, 250.00002, 250.00002)" fill-opacity="1" height="236.9425" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="1863.2654" x="525.4746" y="1"/>
+<rect fill="rgb(245.00002, 245.00002, 245.00002)" fill-opacity="1" height="164.9425" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="487.47458" x="1" y="1"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="163.14546" x="163.16455" y="202.9425"/>
+</g>
+<g data-layer="arrow">
+<path d="M 489.47458 90.73846 L 524.4746 91.77775" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1457.1073" y="-10.471251">
+
+<tspan dy="22.942501" x="1457.1073">platform</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="244.73729" y="-10.471251">
+
+<tspan dy="22.942501" x="244.73729">backend</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="244.73729" y="226.47125">
+
+<tspan dy="22.942501" x="244.73729">monitoring</tspan>
+</text>
+</g>
+</g>
+<g transform="translate(559.4746, 35)">
+<g data-layer="content">
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="227.45694" x="1" y="1"/>
+<rect fill="rgb(240.00002, 240.00002, 240.00002)" fill-opacity="1" height="164.9425" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="689.1372" x="265.4569" y="1"/>
+<rect fill="rgb(240.00002, 240.00002, 240.00002)" fill-opacity="1" height="164.9425" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="800.67126" x="991.59406" y="1"/>
+</g>
+<g data-layer="arrow">
+<path d="M 229.45694 55.81014 L 264.4569 58.354065" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 955.5941 83.47125 L 990.59406 83.47125" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="114.72847" y="24.528751">
+
+<tspan dy="22.942501" x="114.72847">platform::gateway</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="610.0255" y="-10.471251">
+
+<tspan dy="22.942501" x="610.0255">platform::services</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1391.9297" y="-10.471251">
+
+<tspan dy="22.942501" x="1391.9297">platform::data</tspan>
+</text>
+</g>
+</g>
+<g transform="translate(1585.0686, 70)">
+<g data-layer="content">
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="10" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="295.11942" x="434.55188" y="1"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="10" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="302.85394" x="1" y="1"/>
+</g>
+<g data-layer="arrow">
+<path d="M 304.85394 47.471252 L 433.55188 47.471252" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="582.1116" y="24.528751">
+
+<tspan dy="22.942501" x="582.1116">platform::data::replica_db</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="152.42697" y="24.528751">
+
+<tspan dy="22.942501" x="152.42697">platform::data::primary_db</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="369.2029" y="24.528751">
+
+<tspan dy="22.942501" x="369.2029">Replication</tspan>
+</text>
+</g>
+</g>
+<g transform="translate(858.9315, 70)">
+<g data-layer="content">
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="293.9505" x="324.18674" y="1"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="286.18674" x="1" y="1"/>
+</g>
+<g data-layer="arrow">
+<path d="M 288.18674 47.471252 L 323.18674 47.471252" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="471.162" y="24.528751">
+
+<tspan dy="22.942501" x="471.162">platform::services::orders</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="144.09337" y="24.528751">
+
+<tspan dy="22.942501" x="144.09337">platform::services::users</tspan>
+</text>
+</g>
+</g>
+<g transform="translate(35, 35)">
+<g data-layer="content">
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="183.13441" x="1" y="1"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="195.34015" x="221.13443" y="1"/>
+</g>
+<g data-layer="arrow">
+<path d="M 185.13441 47.471252 L 220.13443 47.471252" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="92.56721" y="24.528751">
+
+<tspan dy="22.942501" x="92.56721">backend::api</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="318.8045" y="24.528751">
+
+<tspan dy="22.942501" x="318.8045">backend::auth</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+</svg>

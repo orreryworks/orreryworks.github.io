@@ -18,10 +18,44 @@
 
 <section class="demo">
     <h2>See it in action</h2>
-    <div class="demo-panel">
-        <div class="demo-source">
-            <div class="demo-label">input.orr</div>
-            <pre><code>diagram component;
+    <div class="demo-tabs">
+        <input type="radio" name="demo-tab" id="tab-sequence" checked>
+        <input type="radio" name="demo-tab" id="tab-component">
+        <input type="radio" name="demo-tab" id="tab-embedded">
+        <div class="tab-labels">
+            <label for="tab-sequence">Sequence</label>
+            <label for="tab-component">Component</label>
+            <label for="tab-embedded">Mixed</label>
+        </div>
+        <div class="tab-content tab-content-sequence">
+            <div class="demo-panel">
+                <div class="demo-source">
+
+                    <pre><code>diagram sequence;
+
+type Service = Rectangle [fill_color="#e6f3ff"];
+
+client: Oval;
+server as "API Server": Service;
+database: Rectangle;
+
+client -&gt; server: "POST /login";
+server -&gt; database: "Validate credentials";
+database -&gt; server: "User record";
+server -&gt; client: "200 OK + JWT";</code></pre>
+                </div>
+                <div class="demo-arrow">&#8594;</div>
+                <div class="demo-output">
+
+                    <img src="/diagrams/hero-sequence.svg" alt="Rendered sequence diagram showing a login flow between client, API server, and database">
+                </div>
+            </div>
+        </div>
+        <div class="tab-content tab-content-component">
+            <div class="demo-panel">
+                <div class="demo-source">
+
+                    <pre><code>diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff"];
 type Database = Rectangle [fill_color="#e0f0e0"];
@@ -34,11 +68,49 @@ api -&gt; auth: "Verify";
 auth -&gt; db: "Query";
 db -&gt; auth: "Result";
 auth -&gt; api: "Token";</code></pre>
+                </div>
+                <div class="demo-arrow">&#8594;</div>
+                <div class="demo-output">
+
+                    <img src="/diagrams/hero-component.svg" alt="Rendered component diagram showing API Gateway, Auth Service, and Users DB with relations">
+                </div>
+            </div>
         </div>
-        <div class="demo-arrow">&#8594;</div>
-        <div class="demo-output">
-            <div class="demo-label">output.svg</div>
-            <img src="/diagrams/hero-component.svg" alt="Rendered component diagram showing API Gateway, Auth Service, and Users DB with relations">
+        <div class="tab-content tab-content-embedded">
+            <div class="demo-panel">
+                <div class="demo-source">
+
+                    <pre><code>diagram component;
+
+type Service = Rectangle [
+    fill_color="#e6f3ff", rounded=5
+];
+
+auth as "Auth Service": Service
+    embed diagram sequence {
+    client: Rectangle;
+    auth: Rectangle;
+    db: Rectangle;
+    client -&gt; auth: "Login";
+    auth -&gt; db: "Validate";
+    db -&gt; auth: "Result";
+    auth -&gt; client: "Token";
+};
+
+gateway as "API Gateway": Service;
+db as "Users DB": Rectangle [
+    fill_color="#e0f0e0"
+];
+
+gateway -&gt; auth: "Authenticate";
+auth -&gt; db: "Sessions";</code></pre>
+                </div>
+                <div class="demo-arrow">&#8594;</div>
+                <div class="demo-output">
+
+                    <img src="/diagrams/hero-embedded.svg" alt="Rendered embedded diagram showing a component diagram with an embedded sequence diagram inside the Auth Service">
+                </div>
+            </div>
         </div>
     </div>
 </section>
