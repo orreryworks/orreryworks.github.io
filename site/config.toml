@@ -36,7 +36,8 @@ url = "/blog/"
 
 [[extra.menu]]
 name = "Examples"
-url = "/examples/"
+url = "/docs/examples/component-diagrams.html"
+trailing_slash = false
 
 # Social / Links
 socials = [

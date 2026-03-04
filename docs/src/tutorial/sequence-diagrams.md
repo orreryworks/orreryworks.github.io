@@ -41,18 +41,20 @@ api -> db: "Query";
 
 The same four relation types work in sequence diagrams:
 
-```text
+```orrery-norender
 client -> server: "Request";       // forward arrow
 client <- server: "Push event";    // backward arrow
 client <-> server: "Healthcheck";  // bidirectional
 client - server: "Connection pool"; // plain line
 ```
 
+See [Relations](../reference/relations.md) for styling and typed relations.
+
 ## Self-messages
 
 A participant can send a message to itself:
 
-```text
+```orrery-norender
 api -> api: "Rate limit check";
 ```
 
@@ -82,23 +84,32 @@ Activation blocks can be nested to any depth. The visual result is stacked recta
 
 ### Explicit activate/deactivate
 
-For cases where activation doesn't fit neatly into blocks (e.g., asynchronous flows), use explicit statements:
+For cases where activations overlap without one containing the other, use explicit statements:
 
-```text
-activate client;
-client -> server: "Start export job";
-deactivate client;
+```orrery
+diagram sequence;
 
-// Server works independently later
+type AsyncArrow = Arrow [stroke=[color="#888888", style="dashed"]];
+
+client: Rectangle;
+server: Rectangle;
+worker: Rectangle;
+
+client -> server: "POST /export";
 activate server;
-server -> db: "SELECT * FROM records";
-server -> client: "Export ready";
+server -> @AsyncArrow worker: "Start export job";
+activate worker;
+server -> client: "202 Accepted";
 deactivate server;
+worker -> @AsyncArrow client: "Export ready";
+deactivate worker;
 ```
+
+Here `server` and `worker` are both active concurrently, but neither activation fully contains the other — this cannot be expressed with nested block form.
 
 ### Custom activation types
 
-```text
+```orrery-norender
 type CriticalActivation = Activate [
     fill_color="rgba(255,180,180,0.4)",
     stroke=[color="red", width=2.0]
@@ -109,25 +120,31 @@ activate @CriticalActivation server {
 };
 ```
 
+See [Activation](../reference/activation.md) for the full activation syntax.
+
 ## Fragments
 
 Fragments group related interactions into labeled sections. Orrery provides sugar keywords for common UML interaction operators.
 
 ### alt/else — conditional branching
 
-```text
+```orrery
+diagram sequence;
+
+client: Rectangle;
+server: Rectangle;
+
+client -> server: "Request";
 alt "valid token" {
-    client -> server: "Request";
     server -> client: "200 OK";
 } else "invalid token" {
-    client -> server: "Request";
     server -> client: "401 Unauthorized";
 };
 ```
 
 ### opt — optional execution
 
-```text
+```orrery-norender
 opt "cache hit" {
     server -> cache: "Lookup";
     cache -> server: "Cached data";
@@ -136,7 +153,7 @@ opt "cache hit" {
 
 ### loop — iteration
 
-```text
+```orrery-norender
 loop "for each page" {
     client -> server: "GET /items?page=N";
     server -> client: "Page data";
@@ -145,7 +162,7 @@ loop "for each page" {
 
 ### par — parallel execution
 
-```text
+```orrery-norender
 par "fetch user data" {
     server -> db: "SELECT users";
 } par "fetch settings" {
@@ -155,7 +172,7 @@ par "fetch user data" {
 
 ### break — interruption
 
-```text
+```orrery-norender
 break "rate limit exceeded" {
     server -> client: "429 Too Many Requests";
 };
@@ -163,7 +180,7 @@ break "rate limit exceeded" {
 
 ### critical — atomic region
 
-```text
+```orrery-norender
 critical "payment transaction" {
     server -> db: "BEGIN";
     server -> db: "UPDATE balance";
@@ -171,11 +188,34 @@ critical "payment transaction" {
 };
 ```
 
+### Custom fragment types
+
+You can use `fragment`/`section` directly for custom operators:
+
+```orrery-norender
+fragment "review" {
+    section "approved" {
+        server -> client: "200 OK";
+    };
+    section "rejected" {
+        server -> client: "403 Forbidden";
+    };
+};
+```
+
+See [Fragments](../reference/fragments.md) for the full syntax.
+
 ### Nesting fragments
 
 Fragments can be nested inside other fragments and combined with activation:
 
-```text
+```orrery
+diagram sequence;
+
+client: Rectangle;
+server: Rectangle;
+db: Rectangle;
+
 alt "order placed" {
     client -> server: "POST /order";
 
@@ -197,7 +237,7 @@ alt "order placed" {
 
 ### Styling fragments
 
-```text
+```orrery-norender
 alt [background_color="rgba(255,220,220,0.15)", border_stroke=[color="red"]] "auth check" {
     client -> server: "Authenticated request";
 } else "rejected" {
@@ -205,21 +245,40 @@ alt [background_color="rgba(255,220,220,0.15)", border_stroke=[color="red"]] "au
 };
 ```
 
-Available fragment attributes: `background_color`, `border_stroke`, `separator_stroke`, `content_padding`, `operation_label_text`, `section_title_text`.
+See [Fragments](../reference/fragments.md#fragment-attributes) for all available attributes and custom fragment types.
 
 ## Notes
 
-Add annotations to specific participants:
+Attach annotations to participants with the `on` attribute:
 
-```text
-note [on=[server]]: "Handles authentication";
-note [on=[db], align="right"]: "Read replica";
+```orrery
+diagram sequence;
+
+client: Rectangle;
+server: Rectangle;
+db: Rectangle;
+
+note [on=[client]]: "Browser SPA";
+note [on=[db]]: "PostgreSQL 16";
+
+client -> server: "POST /login";
+server -> db: "SELECT user";
+db -> server: "User row";
+server -> client: "200 OK";
 ```
 
-See the [Notes reference](../reference/notes.md) for the full syntax.
+Notes can span multiple participants:
 
-## Next steps
+```orrery
+diagram sequence;
 
-- [Type System](type-system.md) — reusable types and composition
-- [Styling](styling.md) — colors, strokes, and text formatting
-- [Language Specification](../reference/specification.md) — complete reference
+api: Rectangle;
+auth: Rectangle;
+db: Rectangle;
+
+api -> auth: "Verify credentials";
+note [on=[api, auth, db]]: "Authentication boundary";
+auth -> db: "SELECT user";
+```
+
+See the [Notes reference](../reference/notes.md) for margin notes, alignment, and styling.

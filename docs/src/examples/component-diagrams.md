@@ -1,11 +1,5 @@
 # Component Diagram Examples
 
-These examples demonstrate progressively more complex component diagrams. Each shows the source `.orr` code. You can render any example locally with:
-
-```bash
-orrery example.orr -o output.svg
-```
-
 All source files are available in the [examples directory on GitHub](https://github.com/orreryworks/orrery/tree/main/examples).
 
 ## Basic Components and Relations
@@ -62,6 +56,13 @@ auth_logic as "Auth Logic": Control;
 rest_api as "REST API": Interface;
 external as "External System": Boundary;
 
+// Styled content-free shapes
+vip as "VIP User": Actor [stroke=[color="gold"], fill_color="#fff8dc"];
+ledger as "Ledger": Entity [stroke=[color="purple"], fill_color="#f3e5f5"];
+security as "Security": Control [stroke=[color="red"], fill_color="#ffebee"];
+graphql as "GraphQL API": Interface [stroke=[color="blue"], fill_color="#e3f2fd"];
+partner as "Partner Gateway": Boundary [stroke=[color="green"], fill_color="#e8f5e9"];
+
 customer -> rest_api: "Request";
 rest_api -> auth_logic: "Authenticate";
 auth_logic -> account: "Validate";
@@ -111,7 +112,57 @@ monitoring: Service;
 monitoring -> platform::gateway;
 monitoring -> platform::data::primary_db;
 platform::services::orders -> monitoring: "Metrics";
+platform::gateway -> platform::data::primary_db;
 backend -> platform;
 ```
 
 *Source: [component_nesting.orr](https://github.com/orreryworks/orrery/blob/main/examples/component_nesting.orr)*
+
+## Layout Engines
+
+The same graph rendered with basic (default) and sugiyama layout engines side by side using embedded diagrams.
+
+```orrery
+diagram component [background_color="#f5f5f5"];
+
+type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+
+basic_system as "Basic Engine": Rectangle embed diagram component [layout_engine="basic", background_color="#ffffff"] {
+    gateway as "API Gateway": Service;
+    auth as "Auth Service": Service;
+    users as "User Service": Service;
+    orders as "Order Service": Service;
+    db as "Primary DB": Database;
+    cache as "Cache": Database;
+
+    gateway -> auth;
+    gateway -> users;
+    gateway -> orders;
+    auth -> db;
+    users -> db;
+    orders -> db;
+    orders -> cache;
+};
+
+sugiyama_system as "Sugiyama Engine": Rectangle embed diagram component [layout_engine="sugiyama", background_color="#ffffff"] {
+    gateway as "API Gateway": Service;
+    auth as "Auth Service": Service;
+    users as "User Service": Service;
+    orders as "Order Service": Service;
+    db as "Primary DB": Database;
+    cache as "Cache": Database;
+
+    gateway -> auth;
+    gateway -> users;
+    gateway -> orders;
+    auth -> db;
+    users -> db;
+    orders -> db;
+    orders -> cache;
+};
+
+basic_system -> sugiyama_system: "Compare";
+```
+
+*Source: [component_layout_engines.orr](https://github.com/orreryworks/orrery/blob/main/examples/component_layout_engines.orr)*

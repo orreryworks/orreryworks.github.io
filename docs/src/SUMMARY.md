@@ -10,19 +10,27 @@
 
 - [Component Diagrams](tutorial/component-diagrams.md)
 - [Sequence Diagrams](tutorial/sequence-diagrams.md)
-- [Type System](tutorial/type-system.md)
 - [Styling](tutorial/styling.md)
 
-# Reference
+# Language Reference
 
-- [Language Specification](reference/specification.md)
+- [Diagrams](reference/diagrams.md)
+- [Components](reference/components.md)
+- [Relations](reference/relations.md)
 - [Type System](reference/type-system.md)
-- [Literal Values](reference/literal-values.md)
+- [Activation](reference/activation.md)
+- [Fragments](reference/fragments.md)
 - [Notes](reference/notes.md)
-- [Error Handling](reference/error-handling.md)
-- [Configuration](reference/configuration.md)
+- [Styling](reference/styling.md)
+- [Literals](reference/literals.md)
+
+# CLI Manual
+
+- [Commands & Options](cli/commands.md)
+- [Configuration](cli/configuration.md)
 
 # Examples
 
 - [Component Diagrams](examples/component-diagrams.md)
 - [Sequence Diagrams](examples/sequence-diagrams.md)
+- [Cross-Cutting](examples/cross-cutting.md)

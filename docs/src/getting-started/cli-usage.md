@@ -39,7 +39,7 @@ orrery diagram.orr -o output.svg --log-level debug
 
 ## Configuration
 
-Orrery looks for a configuration file in several locations. See the [Configuration](../reference/configuration.md) reference for the full details.
+Orrery looks for a configuration file in several locations. See the [Configuration](../cli/configuration.md) reference for the full details.
 
 Quick setup for a project:
 

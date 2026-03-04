@@ -142,6 +142,7 @@
     font-size: 0.85rem;
     line-height: 1.5;
     overflow-x: auto;
+    background: #303446;
 
     code::before {
         display: none;
@@ -151,9 +152,10 @@
 .demo-output img {
     display: block;
     width: 100%;
-    padding: 1rem;
     object-fit: contain;
     max-height: 24rem;
+    background-color: #e8e8e8;
+    border-radius: 6px;
 }
 
 .demo-arrow {
@@ -242,4 +244,136 @@
         opacity: 0.7;
         margin: 0;
     }
+}
+
+// ── Diagram lightbox ────────────────────────────────────────────────
+
+// Container wrapper (added by JS)
+.diagram-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+// Inside demo-output, fill the parent fully (avoids inline-block baseline gap)
+.demo-output .diagram-container {
+    display: block;
+}
+
+// Magnifier icon — bottom-right, visible on hover
+.diagram-container .diagram-zoom-icon {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+}
+
+.diagram-container:hover .diagram-zoom-icon {
+    opacity: 1;
+}
+
+// Lightbox modal
+.diagram-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.75);
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    &.visible {
+        opacity: 1;
+    }
+}
+
+.diagram-lightbox-content {
+    position: relative;
+    background: #e8e8e8;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow: auto;
+    cursor: default;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+    img {
+        display: block;
+        max-width: none;
+        max-height: 85vh;
+    }
+}
+
+.diagram-lightbox-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.15s ease;
+
+    &:hover {
+        background: #c0392b;
+    }
+}
+
+// Make demo-output images clickable (cursor hint)
+.demo-output img {
+    cursor: zoom-in;
+}
+
+// ── Orrery syntax highlighting (highlight.js tokens, catppuccin-frappe) ──
+// Scoped to .language-orrery to avoid interfering with Syntect-highlighted blocks.
+code.language-orrery {
+    // Base — catppuccin-frappe surface0
+    &.hljs {
+        background: transparent;
+        color: #c6d0f5;
+        padding: 0;
+    }
+
+    .hljs-keyword  { color: #ca9ee6; } // mauve
+    .hljs-literal  { color: #ef9f76; } // peach
+    .hljs-string   { color: #a6d189; } // green
+    .hljs-subst    { color: #e5c890; } // yellow (escape sequences)
+    .hljs-number   { color: #ef9f76; } // peach
+    .hljs-comment  { color: #626880; } // overlay0
+    .hljs-type     { color: #e5c890; } // yellow
+    .hljs-meta     { color: #99d1db; } // teal (@ prefix)
+    .hljs-title    { color: #8caaee; } // blue (element names)
+    .hljs-attr     { color: #ef9f76; } // peach (attribute names)
+    .hljs-operator { color: #99d1db; } // teal
+    .hljs-punctuation { color: #737994; } // overlay1
 }

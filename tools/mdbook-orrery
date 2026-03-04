@@ -3,10 +3,10 @@
 
 Code blocks fenced with ```orrery that begin with a `diagram` declaration are:
 1. Rendered to SVG via the orrery CLI
-2. Displayed as source code (converted to ```text)
+2. Displayed as source code (converted to ```orrery)
 3. Followed by the rendered SVG image
 
-Code blocks that don't start with `diagram` are left as ```text for display.
+Code blocks that don't start with `diagram` are left as ```orrery for display.
 
 SVGs are cached by content hash in src/diagrams/ to avoid re-rendering
 unchanged diagrams.
@@ -21,6 +21,7 @@ import sys
 import tempfile
 
 FENCE_PATTERN = re.compile(r"```orrery\n(.*?)```", re.DOTALL)
+NORENDER_PATTERN = re.compile(r"```orrery-norender\n(.*?)```", re.DOTALL)
 DIAGRAM_DECL = re.compile(r"^\s*diagram\s+")
 DIAGRAMS_DIR = "diagrams"
 
@@ -60,6 +61,9 @@ def process_chapter(chapter, src_dir):
     if not content or "```orrery" not in content:
         return
 
+    # Convert ```orrery-norender blocks to ```orrery (highlight only, no render)
+    content = NORENDER_PATTERN.sub(r"```orrery\n\1```", content)
+
     chapter_path = chapter.get("path", "")
     # Compute relative path from chapter to diagrams/
     depth = chapter_path.count("/")
@@ -73,7 +77,7 @@ def process_chapter(chapter, src_dir):
 
         # Only render blocks that start with a diagram declaration
         if not DIAGRAM_DECL.match(code):
-            return f"```text\n{code}```"
+            return f"```orrery\n{code}```"
 
         code_hash = hashlib.sha256(code.encode()).hexdigest()[:16]
         svg_name = f"orr-{code_hash}.svg"
@@ -83,10 +87,10 @@ def process_chapter(chapter, src_dir):
         if not os.path.exists(svg_path):
             if not render_to_svg(code, svg_path):
                 # On failure, just show the code block without image
-                return f"```text\n{code}```"
+                return f"```orrery\n{code}```"
 
         rel_path = f"{rel_prefix}{DIAGRAMS_DIR}/{svg_name}"
-        return f"```text\n{code}```\n\n![Rendered diagram]({rel_path})"
+        return f"```orrery\n{code}```\n\n![Rendered diagram]({rel_path})"
 
     chapter["content"] = FENCE_PATTERN.sub(replace_block, content)
 

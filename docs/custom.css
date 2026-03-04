@@ -1,9 +1,137 @@
-/* Light box for rendered diagrams — ensures visibility on dark themes */
+/* ── Rendered diagrams ─────────────────────────────────────────────── */
+
+/* Thumbnail in page flow */
 img[alt="Rendered diagram"] {
     background-color: #e8e8e8;
     border: 1px solid #c0c0c0;
     border-radius: 6px;
-    padding: 16px;
     display: block;
+    max-width: 750px;
+    box-sizing: border-box;
+    cursor: zoom-in;
+}
+
+/* Container wrapper (added by JS) */
+.diagram-container {
+    position: relative;
+    display: inline-block;
     max-width: 100%;
 }
+
+/* Magnifier icon — bottom-right, visible on hover */
+.diagram-container .diagram-zoom-icon {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+.diagram-container .diagram-zoom-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.diagram-container:hover .diagram-zoom-icon {
+    opacity: 1;
+}
+
+/* ── Lightbox modal ───────────────────────────────────────────────── */
+
+.diagram-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.75);
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.diagram-lightbox.visible {
+    opacity: 1;
+}
+
+.diagram-lightbox-content {
+    position: relative;
+    background: #e8e8e8;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow: auto;
+    cursor: default;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+.diagram-lightbox-content img {
+    display: block;
+    max-width: none;
+    max-height: 85vh;
+}
+
+.diagram-lightbox-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.15s ease;
+}
+.diagram-lightbox-close:hover {
+    background: #c0392b;
+}
+
+/* ── Orrery syntax highlighting — missing hljs classes ──────────────── */
+
+/* Coal & Navy themes (Tomorrow Night palette) */
+.coal .hljs-type,
+.navy .hljs-type { color: #f0c674; }
+
+.coal .hljs-meta,
+.navy .hljs-meta { color: #8abeb7; }
+
+.coal .hljs-operator,
+.navy .hljs-operator { color: #8abeb7; }
+
+.coal .hljs-punctuation,
+.navy .hljs-punctuation { color: #969896; }
+
+.coal .hljs-subst,
+.navy .hljs-subst { color: #de935f; }
+
+/* Light & Rust themes (default highlight.js palette) */
+.light .hljs-operator,
+.rust .hljs-operator { color: #1f7199; }
+
+.light .hljs-punctuation,
+.rust .hljs-punctuation { color: #998; }
+
+.light .hljs-subst,
+.rust .hljs-subst { color: #008080; }
+
+/* Ayu theme */
+.ayu .hljs-operator { color: #f29668; }
+.ayu .hljs-punctuation { color: #5c6773; }
+.ayu .hljs-subst { color: #e6b673; }

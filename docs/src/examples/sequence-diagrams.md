@@ -1,11 +1,5 @@
 # Sequence Diagram Examples
 
-These examples demonstrate progressively more complex sequence diagrams. Each shows the source `.orr` code. You can render any example locally with:
-
-```bash
-orrery example.orr -o output.svg
-```
-
 All source files are available in the [examples directory on GitHub](https://github.com/orreryworks/orrery/tree/main/examples).
 
 ## Basic Messages and Types
@@ -39,6 +33,7 @@ api -> [stroke=[color="orange"]] api: "Rate limit check";
 
 client -> @ErrorArrow api: "Malformed request";
 api -> @ErrorArrow client: "400 Bad Request";
+client -> @AsyncArrow api: "WebSocket upgrade";
 ```
 
 *Source: [sequence_basic.orr](https://github.com/orreryworks/orrery/blob/main/examples/sequence_basic.orr)*
@@ -55,32 +50,57 @@ type Store = Rectangle[fill_color="#e0f0e0", stroke=[color="#339966"], rounded=8
 type RequestArrow = Arrow[stroke=[color="steelblue", width=1.5]];
 type ResponseArrow = Arrow[stroke=[color="seagreen", style="dashed"]];
 type CriticalActivation = Activate[fill_color="rgba(255,180,180,0.4)", stroke=[color="red", width=2.0]];
+type HighlightActivation = Activate[fill_color="rgba(180,200,255,0.3)"];
 
 client as "Browser": Participant;
 api as "API Gateway": Participant;
 auth as "Auth Service": Participant;
 db as "Database": Store;
 
-// Deep nesting
+// Block form with deep nesting
 activate client {
     client -> @RequestArrow api: "POST /checkout";
+
     activate api {
         api -> @RequestArrow auth: "Verify session";
+
         activate auth {
             auth -> @RequestArrow db: "SELECT session";
+
             activate db {
                 db -> db: "Validate TTL";
                 db -> @ResponseArrow auth: "Session valid";
             };
+
             auth -> @ResponseArrow api: "Token refreshed";
         };
+
         api -> @RequestArrow db: "INSERT order";
         db -> @ResponseArrow api: "Order ID";
         api -> @ResponseArrow client: "201 Created";
     };
 };
 
-// Explicit statements for async flow
+// Stacked activation (same participant)
+activate api {
+    client -> @RequestArrow api: "POST /payment";
+    api -> @RequestArrow db: "Check balance";
+    db -> @ResponseArrow api: "Balance OK";
+
+    activate api {
+        api -> @RequestArrow auth: "Fraud check";
+        auth -> @ResponseArrow api: "Cleared";
+
+        activate api {
+            api -> @RequestArrow db: "INSERT transaction";
+            db -> @ResponseArrow api: "Transaction ID";
+        };
+    };
+
+    api -> @ResponseArrow client: "Payment confirmed";
+};
+
+// Explicit statements
 activate client;
 client -> @RequestArrow api: "Start export job";
 deactivate client;
@@ -94,14 +114,38 @@ deactivate db;
 api -> @ResponseArrow client: "Export ready";
 deactivate api;
 
-// Custom activation type
+// Mixed: explicit outer + block inner
+activate client;
+client -> @RequestArrow api: "DELETE /account";
+
 activate @CriticalActivation api {
     api -> @RequestArrow auth: "Revoke tokens";
     auth -> @ResponseArrow api: "Revoked";
+
+    activate @CriticalActivation db {
+        api -> @RequestArrow db: "DELETE cascade";
+        db -> @ResponseArrow api: "Purged";
+    };
+
+    api -> @ResponseArrow client: "Account deleted";
+};
+
+deactivate client;
+
+// Custom activation types
+activate @HighlightActivation api {
+    api -> @RequestArrow db: "ANALYZE tables";
+    db -> @ResponseArrow api: "Statistics updated";
+};
+
+// Anonymous TypeSpec
+activate @Activate[fill_color="rgba(255,240,200,0.4)", stroke=[color="orange"]] auth {
+    auth -> @RequestArrow db: "Rotate encryption keys";
+    db -> @ResponseArrow auth: "Keys rotated";
 };
 ```
 
-*Source: [sequence_activation.orr](https://github.com/orreryworks/orrery/blob/main/examples/sequence_activation.orr) (trimmed)*
+*Source: [sequence_activation.orr](https://github.com/orreryworks/orrery/blob/main/examples/sequence_activation.orr)*
 
 ## Fragments
 
@@ -122,6 +166,22 @@ server as "API Server": Participant;
 db as "Database": Store;
 cache as "Cache": Store;
 
+// Base fragment syntax
+fragment "Request Handling" {
+    section "cache hit" {
+        client -> @RequestArrow server: "GET /products";
+        server -> @RequestArrow cache: "Lookup key";
+        cache -> @ResponseArrow server: "Cached response";
+        server -> @ResponseArrow client: "200 OK";
+    };
+    section "cache miss" {
+        server -> @RequestArrow db: "SELECT products";
+        db -> @ResponseArrow server: "Result set";
+        server -> @RequestArrow cache: "SET key";
+        server -> @ResponseArrow client: "200 OK";
+    };
+};
+
 // alt/else with custom fragment type
 alt @SecurityFragment "valid session" {
     client -> @RequestArrow server: "Request with JWT";
@@ -129,6 +189,12 @@ alt @SecurityFragment "valid session" {
 } else "expired session" {
     client -> @RequestArrow server: "Request with stale JWT";
     server -> @ErrorArrow client: "401 Unauthorized";
+};
+
+// opt
+opt [background_color="rgba(220,240,255,0.15)"] "cache warm" {
+    server -> @RequestArrow cache: "GET session";
+    cache -> @ResponseArrow server: "Session data";
 };
 
 // loop with styled border
@@ -146,6 +212,11 @@ par "fetch user profile" {
 } par "fetch preferences" {
     server -> @RequestArrow cache: "GET prefs";
     cache -> @ResponseArrow server: "Preferences";
+};
+
+// break
+break [border_stroke=[color="red", style="dashed"]] "rate limit exceeded" {
+    server -> @ErrorArrow client: "429 Too Many Requests";
 };
 
 // critical with custom styling
@@ -176,3 +247,72 @@ alt "order placed" {
 ```
 
 *Source: [sequence_fragments.orr](https://github.com/orreryworks/orrery/blob/main/examples/sequence_fragments.orr)*
+
+## Notes
+
+Attached notes, spanning notes, margin notes, alignment, custom note types, and notes inside activation blocks and fragments.
+
+```orrery
+diagram sequence;
+
+type Participant = Rectangle[fill_color="#e6f3ff", stroke=[color="#336699"]];
+type Store = Rectangle[fill_color="#e0f0e0", stroke=[color="#339966"], rounded=8];
+type WarningNote = Note[background_color="#fff3cd", stroke=[color="orange", width=2.0], text=[color="#856404"]];
+type ErrorNote = Note[background_color="#f8d7da", stroke=[color="red", width=2.0], text=[color="#721c24"]];
+type InfoNote = Note[background_color="#d1ecf1", stroke=[color="#0c5460"], text=[color="#0c5460", font_size=12]];
+type RequestArrow = Arrow[stroke=[color="steelblue", width=1.5]];
+type ResponseArrow = Arrow[stroke=[color="seagreen", style="dashed"]];
+
+client as "Browser": Participant;
+api as "API Gateway": Participant;
+auth as "Auth Service": Participant;
+db as "Database": Store;
+
+// Attached notes with alignment
+note [on=[client], align="right"]: "SPA client with local token cache";
+note [on=[db], align="left"]: "PostgreSQL 16 cluster";
+
+client -> @RequestArrow api: "POST /login";
+note [on=[api]]: "Validating request schema";
+
+// Spanning notes
+api -> @RequestArrow auth: "Verify credentials";
+note [on=[api, auth, db]]: "Authentication boundary";
+
+auth -> @RequestArrow db: "SELECT user WHERE email = ?";
+db -> @ResponseArrow auth: "User row";
+
+// Margin notes
+note [align="left"]: "Left margin: audit trail";
+note [align="right"]: "Right margin: latency budget 250ms";
+
+// Over all participants
+note: "System-wide maintenance window 02:00\u{2013}04:00 UTC";
+
+auth -> @ResponseArrow api: "JWT issued";
+
+// Custom note types
+note @WarningNote [on=[api]]: "Token cache nearing capacity";
+note @ErrorNote [on=[db]]: "Replication lag > 5s";
+note @InfoNote [on=[auth, db]]: "mTLS connection established";
+
+api -> @ResponseArrow client: "200 OK + token";
+
+// Notes inside activation and fragments
+client -> @RequestArrow api: "GET /dashboard";
+
+activate api {
+    note @InfoNote [on=[api]]: "Rate limiter: 42/100 requests used";
+
+    alt "cache hit" {
+        api -> @ResponseArrow client: "Cached dashboard";
+    } else "cache miss" {
+        api -> @RequestArrow db: "SELECT dashboard_data";
+        note @WarningNote [on=[db]]: "Slow query: full table scan";
+        db -> @ResponseArrow api: "Result set";
+        api -> @ResponseArrow client: "Fresh dashboard";
+    };
+};
+```
+
+*Source: [sequence_notes.orr](https://github.com/orreryworks/orrery/blob/main/examples/sequence_notes.orr)*

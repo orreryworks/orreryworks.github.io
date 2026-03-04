@@ -73,22 +73,24 @@ Change the diagram type to `sequence`:
 ```orrery
 diagram sequence;
 
-type Service = Rectangle [fill_color="#e6f3ff"];
+type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+type Client = Oval [fill_color="#fff0e0"];
 
-client: Oval;
+client: Client;
 server as "API Server": Service;
-database: Rectangle;
+database as "Users DB": Database;
 
-client -> server: "POST /login";
-server -> database: "Validate credentials";
-database -> server: "User record";
-server -> client: "200 OK + JWT";
+client -> server: "HTTP Request";
+server -> database: "SELECT * FROM users";
+database -> server: "Result set";
+server -> client: "JSON Response";
 ```
 
-The same elements are now laid out as a sequence diagram: participants arranged horizontally with messages flowing downward in order.
+The same elements and types are now laid out as a sequence diagram: participants arranged horizontally with messages flowing downward in order.
 
 ## Next steps
 
 - [CLI Usage](cli-usage.md) — command-line options and configuration
-- [Language Specification](../reference/specification.md) — complete language reference
-- [Type System](../reference/type-system.md) — types, inheritance, and composition
+- [Language Reference](../reference/diagrams.md) — complete language reference
+- [Examples](../examples/component-diagrams.md) — more diagram examples

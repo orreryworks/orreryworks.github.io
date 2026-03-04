@@ -1,0 +1,6 @@
+{# Orrery syntax highlighting — loads highlight.js core (only needed for
+   orrery blocks; other languages use Zola's built-in Syntect highlighter). #}
+<script src="{{ get_url(path='js/highlight.min.js') | safe }}"></script>
+<script src="{{ get_url(path='js/orrery-highlight.js') | safe }}"></script>
+{# Diagram lightbox — click-to-zoom on rendered diagrams. #}
+<script src="{{ get_url(path='js/diagram-lightbox.js') | safe }}"></script>

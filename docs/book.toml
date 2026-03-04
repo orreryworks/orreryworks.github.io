@@ -13,6 +13,7 @@ command = "../tools/mdbook-orrery"
 
 [output.html]
 additional-css = ["custom.css"]
+additional-js = ["orrery-highlight.js", "diagram-lightbox.js"]
 default-theme = "coal"
 preferred-dark-theme = "coal"
 git-repository-url = "https://github.com/orreryworks/orreryworks.github.io"

@@ -1,4 +1,4 @@
-<svg height="556.6684" viewBox="0 0 904.4238 556.6684" width="904.4238" xmlns="http://www.w3.org/2000/svg">
+<svg height="899.61084" viewBox="0 0 1074.532 899.61084" width="1074.532" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <marker id="arrow-right-black" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M 0 0 L 10 5 L 0 10 z" fill="black" fill-opacity="1"/>
@@ -8,49 +8,104 @@
 <g>
 <g>
 <g data-layer="lifeline">
-<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="68.93189" x2="68.93189" y1="112.22279" y2="464.44556"/>
-<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="373.4722" x2="373.4722" y1="107.47125" y2="464.4456"/>
-<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="727.3793" x2="727.3793" y1="107.47125" y2="464.4456"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="699.54004" x2="699.54004" y1="107.47125" y2="807.38806"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="412.01447" x2="412.01447" y1="107.47125" y2="807.38806"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="97.145454" x2="97.145454" y1="112.22279" y2="807.38806"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="900.2734" x2="900.2734" y1="107.47125" y2="807.38806"/>
 </g>
 <g data-layer="content">
-<ellipse cx="68.93189" cy="60" fill="white" rx="67.93189" ry="51.222797" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="166.45747" x="290.24347" y="13.528748"/>
-<rect fill="white" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="152.08917" x="651.3347" y="13.528748"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="150.94946" x="624.0653" y="13.528748"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="162.79477" x="330.61707" y="13.528748"/>
+<ellipse cx="97.145454" cy="60" fill="white" rx="96.145454" ry="51.222797" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="146.51721" x="827.0148" y="13.528748"/>
+</g>
+<g data-layer="activation">
+<rect fill="white" fill-opacity="1" height="462.9425" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="8" x="408.01447" y="284.44556"/>
+</g>
+<g data-layer="fragment">
+<rect fill="none" height="502.9425" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="843.1279" x="77.14545" y="324.44556"/>
+<path d="M 120.00164 324.44556 L 120.00164 340.79956 L 110.00164 350.79956 L 77.14545 350.79956" fill="white" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<line stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="85.14545" x2="872.2734" y1="693.74207" y2="693.74207"/>
+</g>
+<g data-layer="note">
+<path d="M 289.00726 524.44556 L 523.02167 524.44556 L 535.02167 536.44556 L 535.02167 567.38806 L 289.00726 567.38806 L 289.00726 524.44556 Z" fill="lightyellow" fill-opacity="1" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 523.02167 524.44556 L 535.02167 536.44556 L 523.02167 536.44556 Z" fill="color(srgb 1 1 0.87843144 / 0.8)" fill-opacity="0.8" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 523.02167 524.44556 L 535.02167 536.44556" fill="none" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 </g>
 <g data-layer="arrow">
-<path d="M 68.93189 224.44559 L 373.4722 224.44559" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
-<path d="M 373.4722 284.4456 L 727.3793 284.4456" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
-<path d="M 727.3793 344.4456 L 373.4722 344.4456" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
-<path d="M 373.4722 404.4456 L 68.93189 404.4456" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 97.145454 224.44559 L 412.01447 224.44559" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 416.01447 284.4456 L 699.54004 284.4456" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 699.54004 344.4456 L 416.01447 344.4456" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 416.01447 404.4456 L 900.2734 404.4456" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 900.2734 464.4456 L 416.01447 464.4456" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 408.01447 627.38806 L 97.145454 627.38806" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 699.54004 687.38806 L 416.01447 687.38806" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 408.01447 747.38806 L 97.145454 747.38806" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 </g>
 <g data-layer="text">
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="68.93189" y="37.0575">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="699.54004" y="37.0575">
 
-<tspan dy="22.942501" x="68.93189">client</tspan>
+<tspan dy="22.942501" x="699.54004">inventory</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="373.4722" y="37.0575">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="412.01447" y="37.0575">
 
-<tspan dy="22.942501" x="373.4722">API Server</tspan>
+<tspan dy="22.942501" x="412.01447">Web Shop</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="727.3793" y="37.0575">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="97.145454" y="37.0575">
 
-<tspan dy="22.942501" x="727.3793">database</tspan>
+<tspan dy="22.942501" x="97.145454">Customer</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="221.20204" y="201.50308">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="900.2734" y="37.0575">
 
-<tspan dy="22.942501" x="221.20204">POST /login</tspan>
+<tspan dy="22.942501" x="900.2734">payment</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="550.4257" y="261.50308">
+<text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="93.57355" y="319.26855">
 
-<tspan dy="22.942501" x="550.4257">Validate credentials</tspan>
+<tspan dy="18.354" x="93.57355">alt</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="550.4257" y="321.50308">
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="161.27237" y="320.79807">
 
-<tspan dy="22.942501" x="550.4257">User record</tspan>
+<tspan dy="16.8245" x="161.27237">[In stock]</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="221.20204" y="381.50308">
+<text dominant-baseline="central" fill="rgb(102.00001, 102.00001, 102.00001)" fill-opacity="1" font-family="Arial" font-size="11" text-anchor="middle" x="130.05203" y="692.3298">
 
-<tspan dy="22.942501" x="221.20204">200 OK + JWT</tspan>
+<tspan dy="16.8245" x="130.05203">[Sold out]</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="412.01447" y="522.9743">
+
+<tspan dy="22.942501" x="412.01447">Send confirmation email</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="254.57996" y="201.50308">
+
+<tspan dy="22.942501" x="254.57996">Place order</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="557.7772" y="261.50308">
+
+<tspan dy="22.942501" x="557.7772">Check stock</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="557.7772" y="321.50308">
+
+<tspan dy="22.942501" x="557.7772">Reserved</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="658.1439" y="381.50308">
+
+<tspan dy="22.942501" x="658.1439">Charge</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="658.1439" y="441.50308">
+
+<tspan dy="22.942501" x="658.1439">Confirmed</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="252.57996" y="604.44556">
+
+<tspan dy="22.942501" x="252.57996">Order placed</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="557.7772" y="664.44556">
+
+<tspan dy="22.942501" x="557.7772">Unavailable</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="252.57996" y="724.44556">
+
+<tspan dy="22.942501" x="252.57996">Out of stock</tspan>
 </text>
 </g>
 </g>

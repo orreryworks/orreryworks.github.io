@@ -30,6 +30,8 @@ Each component needs a name and a shape type. The built-in shape types are:
 | `Interface` | Small circle | No |
 | `Boundary` | Circle with line | No |
 
+See [Shape types](../reference/components.md#shape-types) for the full list and details.
+
 ## Display names
 
 By default, the identifier is used as the label. Use `as "..."` to set a different display name:
@@ -45,9 +47,26 @@ fe -> be;
 be -> db;
 ```
 
+## Styling with attributes
+
+Components accept attributes in square brackets to control their appearance:
+
+```orrery
+diagram component;
+
+api as "API Gateway": Rectangle [fill_color="#e6f3ff", rounded=5];
+auth as "Auth Service": Rectangle [fill_color="#e6f3ff", rounded=5];
+users_db as "Users DB": Rectangle [fill_color="#e0f0e0", rounded=10];
+
+api -> auth: "Verify";
+auth -> users_db: "Query";
+```
+
+See [Component attributes](../reference/components.md#component-attributes) for the full list of available attributes.
+
 ## Custom types
 
-Define reusable types to avoid repeating attributes:
+When multiple components share the same style, define a named type to avoid repetition:
 
 ```orrery
 diagram component;
@@ -65,10 +84,12 @@ auth -> users_db: "Query";
 
 Types can extend other types:
 
-```text
+```orrery-norender
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
 type CriticalService = Service [fill_color="#ffe0e0", stroke=[color="red", width=2.0]];
 ```
+
+See [Type System](../reference/type-system.md) for type extension and composition.
 
 ## Nesting
 
@@ -88,7 +109,7 @@ backend: Rectangle [fill_color="#f5f5f5"] {
 
 Nesting can go multiple levels deep:
 
-```text
+```orrery-norender
 platform: Rectangle [fill_color="#fafafa"] {
     gateway: Service;
 
@@ -131,18 +152,20 @@ platform::gateway -> monitoring: "Metrics";
 
 Four relation types are available:
 
-```text
+```orrery-norender
 a -> b: "Forward";      // arrow from a to b
 a <- b: "Backward";     // arrow from b to a
 a <-> b: "Bidirectional"; // arrows both ways
 a - b: "Plain";         // line, no arrowheads
 ```
 
+See [Relations](../reference/relations.md) for styling and typed relations.
+
 ## Layout engines
 
 Component diagrams support two layout engines:
 
-```text
+```orrery-norender
 // Default: basic positioning
 diagram component;
 
@@ -150,7 +173,7 @@ diagram component;
 diagram component [layout_engine="sugiyama"];
 ```
 
-The layout engine can also be set in a [configuration file](../reference/configuration.md).
+The layout engine can also be set in a [configuration file](../cli/configuration.md).
 
 ## Embedded diagrams
 
@@ -176,10 +199,4 @@ gateway: Service;
 gateway -> auth_service: "Authenticate";
 ```
 
-This embeds a sequence diagram inside a component node, showing both the structural and behavioral view.
-
-## Next steps
-
-- [Sequence Diagrams](sequence-diagrams.md) — modeling interactions over time
-- [Type System](type-system.md) — types, inheritance, and composition
-- [Styling](styling.md) — colors, strokes, and text formatting
+This embeds a sequence diagram inside a component node, showing both the structural and behavioral view. See [Diagrams](../reference/diagrams.md) for diagram-level options and embedding.
