@@ -32,14 +32,13 @@ client: Rectangle;
 server: Rectangle;
 db: Rectangle;
 
-activate client {
-    client -> server: "POST /checkout";
-
-    activate server {
-        server -> db: "INSERT order";
+client -> server: "POST /checkout";
+activate server {
+    server -> db: "INSERT order";
+    activate db {
         db -> server: "Order ID";
-        server -> client: "201 Created";
     };
+    server -> client: "201 Created";
 };
 ```
 
@@ -86,27 +85,25 @@ api as "API Gateway": Participant;
 auth as "Auth Service": Participant;
 db as "Database": Store;
 
-activate client {
-    client -> api: "POST /checkout";
-
-    activate api {
-        api -> auth: "Verify session";
-
-        activate auth {
-            auth -> db: "SELECT session";
-
-            activate db {
-                db -> db: "Validate TTL";
-                db -> auth: "Session valid";
-            };
-
-            auth -> api: "Token refreshed";
+client -> api: "POST /checkout";
+activate api {
+    api -> auth: "Verify session";
+    activate auth {
+        auth -> db: "SELECT session";
+        activate db {
+            db -> db: "Validate TTL";
+            db -> auth: "Session valid";
         };
 
-        api -> db: "INSERT order";
-        db -> api: "Order ID";
-        api -> client: "201 Created";
+        auth -> api: "Token refreshed";
     };
+
+    api -> db: "INSERT order";
+    activate db {
+        db -> api: "Order ID";
+    };
+
+    api -> client: "201 Created";
 };
 ```
 
@@ -125,19 +122,21 @@ api: Rectangle;
 auth: Rectangle;
 db: Rectangle;
 
+client -> @RequestArrow api: "POST /payment";
 activate api {
-    client -> @RequestArrow api: "POST /payment";
     api -> @RequestArrow db: "Check balance";
-    db -> @ResponseArrow api: "Balance OK";
+    activate db {
+        db -> @ResponseArrow api: "Balance OK";
+    };
 
-    activate api {
-        api -> @RequestArrow auth: "Fraud check";
+    api -> @RequestArrow auth: "Fraud check";
+    activate auth {
         auth -> @ResponseArrow api: "Cleared";
+    };
 
-        activate api {
-            api -> @RequestArrow db: "INSERT transaction";
-            db -> @ResponseArrow api: "Transaction ID";
-        };
+    api -> @RequestArrow db: "INSERT transaction";
+    activate db {
+        db -> @ResponseArrow api: "Transaction ID";
     };
 
     api -> @ResponseArrow client: "Payment confirmed";
@@ -159,13 +158,13 @@ type HighlightActivation = Activate [fill_color="rgba(180,200,255,0.3)"];
 api: Rectangle;
 db: Rectangle;
 
-activate @CriticalActivation api {
-    api -> db: "DELETE cascade";
+api -> db: "DELETE cascade";
+activate @CriticalActivation db {
     db -> api: "Purged";
 };
 
-activate @HighlightActivation api {
-    api -> db: "ANALYZE tables";
+api -> db: "ANALYZE tables";
+activate @HighlightActivation db {
     db -> api: "Statistics updated";
 };
 ```
@@ -191,14 +190,14 @@ api: Rectangle;
 db: Rectangle;
 
 // Named type
-activate @CriticalActivation api {
-    api -> db: "DELETE cascade";
+api -> db: "DELETE cascade";
+activate @CriticalActivation db {
     db -> api: "Purged";
 };
 
 // Anonymous type (inline)
-activate @Activate[fill_color="rgba(255,240,200,0.4)", stroke=[color="orange"]] api {
-    api -> db: "Rotate encryption keys";
+api -> db: "Rotate encryption keys";
+activate @Activate[fill_color="rgba(255,240,200,0.4)", stroke=[color="orange"]] db {
     db -> api: "Keys rotated";
 };
 ```
@@ -216,8 +215,9 @@ Activation blocks do **not** create component namespaces. Unlike [nesting](compo
 
 ```orrery-norender
 // Correct — flat naming
+client -> server: "Request";
 activate server {
-    client -> server: "Request";
+    server -> client: "Response";
 };
 
 // Incorrect — no namespace scoping in activation blocks
@@ -239,7 +239,6 @@ api: Rectangle;
 db: Rectangle;
 
 client -> api: "GET /dashboard";
-
 activate api {
     note @InfoNote [on=[api]]: "Rate limiter: 42/100 requests used";
 

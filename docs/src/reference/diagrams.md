@@ -155,8 +155,8 @@ auth_service as "Auth Service": Service embed diagram sequence {
     activate validator {
         validator -> token_store: "Lookup user";
         token_store -> validator: "User record";
+        validator -> client: "JWT token";
     };
-    validator -> client: "JWT token";
 };
 
 gateway as "API Gateway": Service;
