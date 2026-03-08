@@ -56,8 +56,8 @@ api -> @Arrow[stroke=[color="purple", width=2.0]] primary_db: "SELECT dashboard"
 primary_db -> @ResponseArrow[stroke=[color="green"]] api: "Result set";
 
 // Custom activation and fragment types
-activate @CriticalActivation api {
-    api -> @UrgentRequest primary_db: "UPDATE session.last_active";
+api -> @UrgentRequest primary_db: "UPDATE session.last_active";
+activate @CriticalActivation primary_db {
     primary_db -> @ResponseArrow api: "Ack";
 };
 
@@ -135,7 +135,7 @@ server -> @RgbaColor client: "RGBA: semi-transparent violet";
 note @Note[on=[server], background_color="rgba(255, 255, 200, 0.8)", stroke=[color="goldenrod", width=2.0, style="dashed"], text=[font_size=13, color="darkgoldenrod"]]: "Fully styled note: bg, stroke, text";
 
 // Styled activation
-activate @Activate[fill_color="rgba(70, 130, 180, 0.15)", stroke=[color="steelblue", width=2.0]] server {
+activate @Activate[fill_color="rgba(70, 130, 180, 0.15)", stroke=[color="steelblue", width=2.0]] store {
     server -> [stroke=RoundCapStroke, text=HighlightText] store: "Round cap + join, highlighted text";
     store -> @DashedArrow server: "Response";
 };
@@ -242,8 +242,8 @@ outer as "Outer System": Service embed diagram sequence {
         charge_svc -> [stroke=[color="steelblue"]] fraud_check: "Evaluate risk";
         fraud_check -> [stroke=[color="seagreen", style="dashed"]] charge_svc: "Score";
 
-        activate charge_svc {
-            charge_svc -> [stroke=[color="steelblue"]] ledger: "Debit";
+        charge_svc -> [stroke=[color="steelblue"]] ledger: "Debit";
+        activate ledger {
             ledger -> [stroke=[color="seagreen", style="dashed"]] charge_svc: "Confirmation";
         };
     };

@@ -256,8 +256,8 @@ auth -> @ResponseArrow api: "Session valid";
 note @WarningNote [on=[auth]]: "Token expires in 60s";
 
 // Typed activation
-activate @CriticalActivation api {
-    api -> @RequestArrow primary_db: "UPDATE session.last_active";
+api -> @RequestArrow primary_db: "UPDATE session.last_active";
+activate @CriticalActivation primary_db {
     primary_db -> @ResponseArrow api: "Ack";
 };
 

@@ -69,14 +69,13 @@ client: Rectangle;
 server: Rectangle;
 db: Rectangle;
 
-activate client {
-    client -> server: "Request";
-
-    activate server {
-        server -> db: "Query";
+client -> server: "Request";
+activate server {
+    server -> db: "Query";
+    activate db {
         db -> server: "Result";
-        server -> client: "Response";
     };
+    server -> client: "Response";
 };
 ```
 

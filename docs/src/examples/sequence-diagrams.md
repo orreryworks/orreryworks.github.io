@@ -58,41 +58,41 @@ auth as "Auth Service": Participant;
 db as "Database": Store;
 
 // Block form with deep nesting
-activate client {
-    client -> @RequestArrow api: "POST /checkout";
+client -> @RequestArrow api: "POST /checkout";
+activate api {
 
-    activate api {
-        api -> @RequestArrow auth: "Verify session";
+    api -> @RequestArrow auth: "Verify session";
+    activate auth {
 
-        activate auth {
-            auth -> @RequestArrow db: "SELECT session";
-
-            activate db {
-                db -> db: "Validate TTL";
-                db -> @ResponseArrow auth: "Session valid";
-            };
-
-            auth -> @ResponseArrow api: "Token refreshed";
+        auth -> @RequestArrow db: "SELECT session";
+        activate db {
+            db -> db: "Validate TTL";
+            db -> @ResponseArrow auth: "Session valid";
         };
 
-        api -> @RequestArrow db: "INSERT order";
-        db -> @ResponseArrow api: "Order ID";
-        api -> @ResponseArrow client: "201 Created";
+        auth -> @ResponseArrow api: "Token refreshed";
     };
+
+    api -> @RequestArrow db: "INSERT order";
+    activate db {
+        db -> @ResponseArrow api: "Order ID";
+    };
+
+    api -> @ResponseArrow client: "201 Created";
 };
 
 // Stacked activation (same participant)
+client -> @RequestArrow api: "POST /payment";
 activate api {
-    client -> @RequestArrow api: "POST /payment";
     api -> @RequestArrow db: "Check balance";
     db -> @ResponseArrow api: "Balance OK";
 
+    api -> @RequestArrow auth: "Fraud check";
     activate api {
-        api -> @RequestArrow auth: "Fraud check";
         auth -> @ResponseArrow api: "Cleared";
 
+        api -> @RequestArrow db: "INSERT transaction";
         activate api {
-            api -> @RequestArrow db: "INSERT transaction";
             db -> @ResponseArrow api: "Transaction ID";
         };
     };
@@ -101,9 +101,7 @@ activate api {
 };
 
 // Explicit statements
-activate client;
 client -> @RequestArrow api: "Start export job";
-deactivate client;
 
 activate api;
 api -> @RequestArrow db: "SELECT * FROM records";
@@ -115,15 +113,15 @@ api -> @ResponseArrow client: "Export ready";
 deactivate api;
 
 // Mixed: explicit outer + block inner
-activate client;
 client -> @RequestArrow api: "DELETE /account";
+activate client;
 
 activate @CriticalActivation api {
     api -> @RequestArrow auth: "Revoke tokens";
     auth -> @ResponseArrow api: "Revoked";
 
+    api -> @RequestArrow db: "DELETE cascade";
     activate @CriticalActivation db {
-        api -> @RequestArrow db: "DELETE cascade";
         db -> @ResponseArrow api: "Purged";
     };
 
@@ -133,14 +131,14 @@ activate @CriticalActivation api {
 deactivate client;
 
 // Custom activation types
-activate @HighlightActivation api {
-    api -> @RequestArrow db: "ANALYZE tables";
+api -> @RequestArrow db: "ANALYZE tables";
+activate @HighlightActivation db {
     db -> @ResponseArrow api: "Statistics updated";
 };
 
 // Anonymous TypeSpec
-activate @Activate[fill_color="rgba(255,240,200,0.4)", stroke=[color="orange"]] auth {
-    auth -> @RequestArrow db: "Rotate encryption keys";
+auth -> @RequestArrow db: "Rotate encryption keys";
+activate @Activate[fill_color="rgba(255,240,200,0.4)", stroke=[color="orange"]] db {
     db -> @ResponseArrow auth: "Keys rotated";
 };
 ```
@@ -300,7 +298,6 @@ api -> @ResponseArrow client: "200 OK + token";
 
 // Notes inside activation and fragments
 client -> @RequestArrow api: "GET /dashboard";
-
 activate api {
     note @InfoNote [on=[api]]: "Rate limiter: 42/100 requests used";
 

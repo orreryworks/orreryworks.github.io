@@ -3,10 +3,11 @@
 
 Code blocks fenced with ```orrery that begin with a `diagram` declaration are:
 1. Rendered to SVG via the orrery CLI
-2. Displayed as source code (converted to ```orrery)
+2. Displayed as source code
 3. Followed by the rendered SVG image
 
-Code blocks that don't start with `diagram` are left as ```orrery for display.
+Code blocks fenced with ```orrery-norender are left untouched for display
+only — the highlight script handles syntax highlighting for both fence types.
 
 SVGs are cached by content hash in src/diagrams/ to avoid re-rendering
 unchanged diagrams.
@@ -21,7 +22,6 @@ import sys
 import tempfile
 
 FENCE_PATTERN = re.compile(r"```orrery\n(.*?)```", re.DOTALL)
-NORENDER_PATTERN = re.compile(r"```orrery-norender\n(.*?)```", re.DOTALL)
 DIAGRAM_DECL = re.compile(r"^\s*diagram\s+")
 DIAGRAMS_DIR = "diagrams"
 
@@ -61,9 +61,6 @@ def process_chapter(chapter, src_dir):
     if not content or "```orrery" not in content:
         return
 
-    # Convert ```orrery-norender blocks to ```orrery (highlight only, no render)
-    content = NORENDER_PATTERN.sub(r"```orrery\n\1```", content)
-
     chapter_path = chapter.get("path", "")
     # Compute relative path from chapter to diagrams/
     depth = chapter_path.count("/")
@@ -92,6 +89,8 @@ def process_chapter(chapter, src_dir):
         rel_path = f"{rel_prefix}{DIAGRAMS_DIR}/{svg_name}"
         return f"```orrery\n{code}```\n\n![Rendered diagram]({rel_path})"
 
+    # Only ```orrery blocks are matched — ```orrery-norender blocks pass
+    # through untouched (the highlight script handles both fence types).
     chapter["content"] = FENCE_PATTERN.sub(replace_block, content)
 
 
