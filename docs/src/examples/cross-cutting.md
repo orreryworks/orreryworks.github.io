@@ -160,7 +160,9 @@ type Service = Rectangle[fill_color="#e6f3ff", stroke=[color="#336699"], rounded
 type Store = Rectangle[fill_color="#e0f0e0", stroke=[color="#339966"], rounded=8];
 
 // Sequence diagram embedded in a component node
-auth_service as "Auth Service": Service embed diagram sequence {
+auth_service as "Auth Service": Service embed {
+    diagram sequence;
+
     client: Rectangle[fill_color="#fff0e0"];
     validator: Rectangle[fill_color="#e6f3ff"];
     token_store: Rectangle[fill_color="#e0f0e0"];
@@ -183,7 +185,9 @@ auth_service as "Auth Service": Service embed diagram sequence {
 };
 
 // Component diagram embedded with basic layout
-order_service as "Order Service": Service embed diagram component [layout_engine="basic", background_color="#fafafa"] {
+order_service as "Order Service": Service embed {
+    diagram component [layout_engine="basic", background_color="#fafafa"];
+
     api as "API Layer": Rectangle[fill_color="#e6f3ff", rounded=3];
     validation as "Validation": Rectangle[fill_color="#fff3cd", rounded=3];
     persistence as "Persistence": Rectangle[fill_color="#e0f0e0", rounded=3];
@@ -196,7 +200,9 @@ order_service as "Order Service": Service embed diagram component [layout_engine
 };
 
 // Component diagram embedded with sugiyama layout
-analytics as "Analytics Pipeline": Service embed diagram component [layout_engine="sugiyama", background_color="#fafafa"] {
+analytics as "Analytics Pipeline": Service embed {
+    diagram component [layout_engine="sugiyama", background_color="#fafafa"];
+
     ingress as "Ingress": Rectangle[fill_color="#fff0e0"];
     parser as "Parser": Rectangle[fill_color="#e6f3ff"];
     enricher as "Enricher": Rectangle[fill_color="#e6f3ff"];
@@ -221,10 +227,13 @@ order_service -> db: "Orders";
 order_service -> analytics: "Order events";
 
 // Sequence diagram whose participants contain embedded diagrams
-outer as "Outer System": Service embed diagram sequence {
+outer as "Outer System": Service embed {
+    diagram sequence;
 
     // Participant with an embedded component diagram
-    api_node as "API Server": Rectangle embed diagram component [layout_engine="basic", background_color="#f8f8ff"] {
+    api_node as "API Server": Rectangle embed {
+        diagram component [layout_engine="basic", background_color="#f8f8ff"];
+
         router as "Router": Rectangle[fill_color="#e6f3ff", rounded=3];
         middleware as "Middleware": Rectangle[fill_color="#fff3cd", rounded=3];
         handler as "Handler": Rectangle[fill_color="#e0f0e0", rounded=3];
@@ -234,7 +243,9 @@ outer as "Outer System": Service embed diagram sequence {
     };
 
     // Participant with an embedded sequence diagram
-    payment_node as "Payment Gateway": Rectangle embed diagram sequence {
+    payment_node as "Payment Gateway": Rectangle embed {
+        diagram sequence;
+
         charge_svc: Rectangle[fill_color="#fff0e0"];
         fraud_check: Rectangle[fill_color="#fce4ec"];
         ledger: Rectangle[fill_color="#e0f0e0"];
@@ -267,3 +278,85 @@ gateway -> outer: "Delegate";
 ```
 
 *Source: [embedded_diagrams.orr](https://github.com/orreryworks/orrery/blob/main/examples/embedded_diagrams.orr)*
+
+## Imports
+
+Shared type libraries, namespaced and glob imports, transitive re-export, import aliasing, and diagram embedding via import.
+
+### Shared library
+
+```orrery-norender
+library;
+
+type DashedLine = Stroke[style="dashed", color="gray"];
+type ThickBorder = Stroke[color="#336699", width=2.0];
+
+type Service = Rectangle[fill_color="#e6f3ff", stroke=ThickBorder, rounded=5];
+type Database = Oval[fill_color="#e0f0e0", stroke=[color="#339966"]];
+type Client = Oval[fill_color="#fff0e0", stroke=DashedLine];
+
+type DashedArrow = Arrow[stroke=DashedLine];
+type StrongArrow = Arrow[stroke=ThickBorder];
+```
+
+*Source: [shared/styles.orr](https://github.com/orreryworks/orrery/blob/main/examples/imports/shared/styles.orr)*
+
+### Extended library
+
+```orrery-norender
+library;
+
+import "styles";
+
+type SecureService = styles::Service[stroke=[color="red", width=2.0]];
+type CriticalService = SecureService[fill_color="#8b0000", text=[color="white"]];
+
+type SecureArrow = styles::DashedArrow[stroke=[color="red"]];
+```
+
+*Source: [shared/secure.orr](https://github.com/orreryworks/orrery/blob/main/examples/imports/shared/secure.orr)*
+
+### Reusable diagram
+
+```orrery
+diagram sequence;
+
+import "shared/styles"::*;
+
+client: Service;
+server: Service;
+database: Database;
+
+client -> server: "Login Request";
+server -> database: "Verify Credentials";
+database -> @DashedArrow server: "Auth Token";
+server -> client: "Login Response";
+```
+
+*Source: [auth_flow.orr](https://github.com/orreryworks/orrery/blob/main/examples/imports/auth_flow.orr)*
+
+### Main diagram with all import forms
+
+This example shows how a diagram can combine namespaced imports, glob imports, aliasing, and import-based embedding:
+
+```orrery
+diagram component;
+
+import "auth_flow";
+import "shared/secure" as sec;
+import "shared/styles"::*;
+
+type Gateway = Service[rounded=10, fill_color="orange"];
+
+api_gateway: Gateway;
+auth_service: sec::SecureService;
+core_service: sec::CriticalService;
+user_db: Database;
+
+auth_detail: Rectangle embed auth_flow;
+
+api_gateway -> auth_service: "Authenticate";
+api_gateway -> core_service: "Process";
+auth_service -> @DashedArrow user_db: "Query";
+core_service -> user_db: "Read";
+```

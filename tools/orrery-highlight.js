@@ -12,7 +12,7 @@
 hljs.registerLanguage('orrery', function (hljs) {
   var KEYWORDS = {
     keyword:
-      'diagram component sequence type as embed ' +
+      'diagram component sequence type as embed import library ' +
       'activate deactivate ' +
       'fragment section alt else opt loop par break critical ' +
       'note',
@@ -70,7 +70,7 @@ hljs.registerLanguage('orrery', function (hljs) {
   var IDENTIFIER = {
     className: 'title',
     begin:
-      /\b(?!(?:diagram|component|sequence|type|as|embed|activate|deactivate|fragment|section|alt|else|opt|loop|par|break|critical|note|inf|infinity)\b)[a-z_]\w*/,
+      /\b(?!(?:diagram|component|sequence|type|as|embed|import|library|activate|deactivate|fragment|section|alt|else|opt|loop|par|break|critical|note|inf|infinity)\b)[a-z_]\w*/,
     relevance: 0,
   };
 
@@ -89,7 +89,7 @@ hljs.registerLanguage('orrery', function (hljs) {
   // Namespace separator ::
   var NAMESPACE_SEP = {
     className: 'punctuation',
-    begin: /::/,
+    begin: /::\*?/,
   };
 
   // Punctuation: { } [ ] ; ,
@@ -134,11 +134,12 @@ hljs.registerLanguage('orrery', function (hljs) {
 // the mdBook preprocessor does not render them to SVG. Useful for partial
 // code snippets that aren't complete enough to compile.
 document
-  .querySelectorAll('code.language-orrery, code.language-orrery-norender')
+  .querySelectorAll(
+    'code.language-orrery, code.language-orrery-norender, code[data-lang="Orrery"]'
+  )
   .forEach(function (block) {
     block.textContent = block.textContent;
-    // Ensure highlight.js treats orrery-norender the same as orrery
-    if (block.classList.contains('language-orrery-norender')) {
+    if (!block.classList.contains('language-orrery')) {
       block.classList.remove('language-orrery-norender');
       block.classList.add('language-orrery');
     }

@@ -11,6 +11,7 @@
 - [Component Diagrams](tutorial/component-diagrams.md)
 - [Sequence Diagrams](tutorial/sequence-diagrams.md)
 - [Styling](tutorial/styling.md)
+- [Imports](tutorial/imports.md)
 
 # Language Reference
 
@@ -18,6 +19,7 @@
 - [Components](reference/components.md)
 - [Relations](reference/relations.md)
 - [Type System](reference/type-system.md)
+- [Imports](reference/imports.md)
 - [Activation](reference/activation.md)
 - [Fragments](reference/fragments.md)
 - [Notes](reference/notes.md)

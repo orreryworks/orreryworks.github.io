@@ -14,6 +14,7 @@ taxonomies = [{ name = "tags", feed = true }]
 [markdown.highlighting]
 style = "inline"
 theme = "catppuccin-frappe"
+extra_grammars = ["syntaxes/orrery.tmLanguage.json"]
 
 [extra]
 # Stylesheets

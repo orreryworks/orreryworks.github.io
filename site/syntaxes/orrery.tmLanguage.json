@@ -1,0 +1,11 @@
+{
+  "name": "Orrery",
+  "scopeName": "source.orrery",
+  "fileTypes": ["orr"],
+  "patterns": [
+    {
+      "match": ".",
+      "name": "text.plain"
+    }
+  ]
+}

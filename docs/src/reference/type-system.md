@@ -2,6 +2,8 @@
 
 Orrery's type system lets you define reusable visual styles and apply them consistently across your diagrams. Types build on built-in base types and can be composed and extended.
 
+Types can also be shared across files using the [import system](imports.md). Define types in a library file and import them into any diagram that needs them.
+
 ## Defining types
 
 Use the `type` keyword to create a named type from a base type with attributes:

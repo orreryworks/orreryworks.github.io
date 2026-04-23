@@ -1,0 +1,5 @@
+library;
+
+type Service = Rectangle[fill_color="#e6f3ff", rounded=5];
+type Database = Oval[fill_color="#e0f0e0"];
+type Client = Oval[fill_color="#fff0e0"];

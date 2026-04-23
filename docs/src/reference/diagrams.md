@@ -1,26 +1,30 @@
 # Diagrams
 
-Every Orrery file defines a single diagram. The diagram declaration is the first statement and determines what kind of diagram you are creating.
+Every Orrery file starts with a header that declares what the file contains. There are two file types: **diagram files** that produce rendered output, and **library files** that contain only reusable definitions.
 
-## Declaration
+## File types
+
+### Diagram files
+
+A diagram file begins with a `diagram` header and produces rendered output:
 
 ```orrery-norender
 diagram <kind> [attributes];
 ```
 
-The `kind` is either `component` or `sequence`.
+The `kind` is either `component` or `sequence`. Diagram files can contain imports, type definitions, and diagram elements.
 
-```orrery
-diagram component;
+### Library files
 
-frontend: Rectangle;
-backend: Rectangle;
-frontend -> backend;
+A library file begins with a `library` header:
+
+```orrery-norender
+library;
 ```
 
-## Diagram kinds
+Library files contain only imports and type definitions — no diagram elements, no rendered output. They exist to share types across multiple diagrams. See [Imports](imports.md) for details.
 
-### Component diagrams
+## Component diagrams
 
 Component diagrams show the structural parts of a system and how they connect.
 
@@ -44,7 +48,7 @@ Component diagrams support:
 - [Embedded diagrams](#embedded-diagrams) inside components
 - Layout engines: `basic` (default) and `sugiyama`
 
-### Sequence diagrams
+## Sequence diagrams
 
 Sequence diagrams show interactions between participants over time. Time flows downward.
 
@@ -95,10 +99,12 @@ Orrery supports two layout engines for positioning elements:
 ```orrery
 diagram component [background_color="#f5f5f5"];
 
-type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
-type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+basic_view as "Basic Layout": Rectangle embed {
+    diagram component [layout_engine="basic", background_color="#ffffff"];
 
-basic_view as "Basic Layout": Rectangle embed diagram component [layout_engine="basic", background_color="#ffffff"] {
+    type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+    type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+
     gw as "Gateway": Service;
     auth as "Auth": Service;
     users as "Users": Service;
@@ -110,7 +116,12 @@ basic_view as "Basic Layout": Rectangle embed diagram component [layout_engine="
     users -> db;
 };
 
-sugiyama_view as "Sugiyama Layout": Rectangle embed diagram component [layout_engine="sugiyama", background_color="#ffffff"] {
+sugiyama_view as "Sugiyama Layout": Rectangle embed {
+    diagram component [layout_engine="sugiyama", background_color="#ffffff"];
+
+    type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+    type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+
     gw as "Gateway": Service;
     auth as "Auth": Service;
     users as "Users": Service;
@@ -129,13 +140,30 @@ basic_view -> sugiyama_view: "Compare";
 
 A component can contain an entire diagram inside it using the `embed` keyword. This lets you show the internal behavior or structure of a component. Only [content-supporting shapes](components.md#content-supporting-shapes) support embedding.
 
+Orrery supports two forms of embedding: **inline** (define the diagram directly) and **import-based** (reference an external file).
+
+### Inline embedding
+
 ```orrery-norender
-name [as "Label"]: Type [attributes] embed diagram <kind> [diagram_attributes] {
+name [as "Label"]: Type [attributes] embed {
+    diagram <kind> [diagram_attributes];
     // diagram contents
 };
 ```
 
-Embedded diagrams follow the syntax and layout rules of their declared kind and can have their own `background_color` and `layout_engine` attributes.
+The embedded block is structurally identical to a standalone diagram file — it starts with a `diagram` header followed by elements. Embedded diagrams follow the syntax and layout rules of their declared kind.
+
+### Import-based embedding
+
+When a diagram file is imported with a namespaced import, it can be embedded by referencing the import name:
+
+```orrery-norender
+import "path/to/diagram";
+
+name [as "Label"]: Type embed diagram_name;
+```
+
+See [Imports — Diagram embedding](imports.md#diagram-embedding-via-import) for details.
 
 ### Sequence diagram inside a component
 
@@ -146,7 +174,9 @@ diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
 
-auth_service as "Auth Service": Service embed diagram sequence {
+auth_service as "Auth Service": Service embed {
+    diagram sequence;
+
     client: Rectangle [fill_color="#fff0e0"];
     validator: Rectangle [fill_color="#e6f3ff"];
     token_store: Rectangle [fill_color="#e0f0e0"];
@@ -172,7 +202,9 @@ diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
 
-order_service as "Order Service": Service embed diagram component [layout_engine="basic", background_color="#fafafa"] {
+order_service as "Order Service": Service embed {
+    diagram component [layout_engine="basic", background_color="#fafafa"];
+
     api as "API Layer": Component [fill_color="#e6f3ff"];
     validation as "Validation": Component [fill_color="#fff3cd"];
     persistence as "Persistence": Component [fill_color="#e0f0e0"];
@@ -192,7 +224,9 @@ Sequence diagram participants can also embed diagrams:
 ```orrery
 diagram sequence;
 
-api_node as "API Server": Rectangle embed diagram component [layout_engine="basic", background_color="#f8f8ff"] {
+api_node as "API Server": Rectangle embed {
+    diagram component [layout_engine="basic", background_color="#f8f8ff"];
+
     router as "Router": Rectangle [fill_color="#e6f3ff", rounded=3];
     handler as "Handler": Rectangle [fill_color="#e0f0e0", rounded=3];
     router -> handler: "Dispatch";
@@ -203,7 +237,6 @@ db as "Database": Rectangle [fill_color="#e0f0e0"];
 api_node -> db: "Query";
 db -> api_node: "Results";
 ```
-
 
 ## Comments
 
@@ -216,11 +249,14 @@ diagram component; // inline comment
 
 ## Document structure
 
-A complete Orrery document follows this order:
+Every Orrery file follows a strict declaration order:
 
-1. Diagram declaration
-2. Type definitions (optional)
-3. Elements (components, relations, fragments, notes, etc.)
+1. **File header** — `diagram <kind> [attributes];` or `library;`
+2. **Import declarations** (optional) — all `import` statements
+3. **Type definitions** (optional) — all `type` definitions
+4. **Diagram elements** (diagram files only) — components, relations, fragments, notes, etc.
+
+### Diagram file
 
 ```orrery
 diagram component [background_color="#f8f8f8"];
@@ -234,3 +270,16 @@ api as "API": Service;
 db as "DB": Database;
 api -> db: "SQL";
 ```
+
+### Library file
+
+```orrery-norender
+library;
+
+import "base/types"::*;
+
+type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+```
+
+Library files export all their types to any file that imports them. See [Imports](imports.md) for details.

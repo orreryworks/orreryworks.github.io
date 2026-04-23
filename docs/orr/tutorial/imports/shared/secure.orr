@@ -1,0 +1,6 @@
+library;
+
+import "styles";
+
+type SecureService = styles::Service[stroke=[color="red", width=2.0]];
+type CriticalService = SecureService[fill_color="#8b0000", text=[color="white"]];

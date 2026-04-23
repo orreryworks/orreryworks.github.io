@@ -30,5 +30,5 @@ You should see the version number printed. If the command is not found, ensure `
 
 ## Requirements
 
-- Rust 1.86 or later (for building from source)
+- Rust 1.88 or later (for building from source)
 - No runtime dependencies — Orrery is a single static binary

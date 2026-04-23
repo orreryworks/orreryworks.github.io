@@ -184,7 +184,9 @@ diagram component;
 
 type Service = Rectangle [fill_color="#e6f3ff"];
 
-auth_service: Service embed diagram sequence {
+auth_service: Service embed {
+    diagram sequence;
+
     client: Rectangle;
     auth: Rectangle;
     db: Rectangle;

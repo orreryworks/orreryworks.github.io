@@ -1,0 +1,12 @@
+diagram sequence;
+
+import "shared/styles"::*;
+
+client: Service;
+server: Service;
+database: Database;
+
+client -> server: "Login Request";
+server -> database: "Verify Credentials";
+database -> @DashedArrow server: "Auth Token";
+server -> client: "Login Response";
