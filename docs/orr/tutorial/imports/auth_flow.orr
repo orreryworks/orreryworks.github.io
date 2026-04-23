@@ -1,0 +1,12 @@
+diagram sequence;
+
+import "shared/styles"::*;
+
+client: Service;
+server: Service;
+database: Database;
+
+client -> server: "Login";
+server -> database: "Verify";
+database -> server: "Token";
+server -> client: "Authenticated";

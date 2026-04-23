@@ -113,7 +113,9 @@ backend -&gt; db;</code></pre>
 type Svc = Rectangle [fill_color="#e6f3ff", rounded=5];
 
 processor as "Payment Processor": Svc
-    embed diagram sequence {
+    embed {
+    diagram sequence;
+
     validator: Rectangle [fill_color="#fff3e0"];
     ledger: Rectangle [fill_color="#e0f0e0"];
     notifier: Rectangle [fill_color="#f0e6ff"];
@@ -170,10 +172,10 @@ bank -&gt; [stroke=[style="dashed"]] merchant: "Confirmation";</code></pre>
             </p>
         </div>
         <div class="feature">
-            <h3>Zoom into any component</h3>
+            <h3>Compose across files</h3>
             <p>
-                Embed a full diagram inside a component to show its
-                internal behavior — without leaving the diagram.
+                Import shared types, embed full diagrams inside components,
+                and reference external files. Define once, reuse everywhere.
             </p>
         </div>
         <div class="feature">

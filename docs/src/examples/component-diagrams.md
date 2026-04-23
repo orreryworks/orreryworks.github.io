@@ -128,7 +128,12 @@ diagram component [background_color="#f5f5f5"];
 type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
 type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
 
-basic_system as "Basic Engine": Rectangle embed diagram component [layout_engine="basic", background_color="#ffffff"] {
+basic_system as "Basic Engine": Rectangle embed {
+    diagram component [layout_engine="basic", background_color="#ffffff"];
+
+    type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+    type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+
     gateway as "API Gateway": Service;
     auth as "Auth Service": Service;
     users as "User Service": Service;
@@ -145,7 +150,12 @@ basic_system as "Basic Engine": Rectangle embed diagram component [layout_engine
     orders -> cache;
 };
 
-sugiyama_system as "Sugiyama Engine": Rectangle embed diagram component [layout_engine="sugiyama", background_color="#ffffff"] {
+sugiyama_system as "Sugiyama Engine": Rectangle embed {
+    diagram component [layout_engine="sugiyama", background_color="#ffffff"];
+
+    type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+    type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+
     gateway as "API Gateway": Service;
     auth as "Auth Service": Service;
     users as "User Service": Service;
