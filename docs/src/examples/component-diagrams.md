@@ -120,7 +120,7 @@ backend -> platform;
 
 ## Layout Engines
 
-The same graph rendered with basic (default) and sugiyama layout engines side by side using embedded diagrams.
+The same graph rendered with basic, sugiyama, and graphviz layout engines side by side using embedded diagrams.
 
 ```orrery
 diagram component [background_color="#f5f5f5"];
@@ -172,7 +172,30 @@ sugiyama_system as "Sugiyama Engine": Rectangle embed {
     orders -> cache;
 };
 
+graphviz_system as "Graphviz Engine": Rectangle embed {
+    diagram component [layout_engine="graphviz", background_color="#ffffff"];
+
+    type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+    type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+
+    gateway as "API Gateway": Service;
+    auth as "Auth Service": Service;
+    users as "User Service": Service;
+    orders as "Order Service": Service;
+    db as "Primary DB": Database;
+    cache as "Cache": Database;
+
+    gateway -> auth;
+    gateway -> users;
+    gateway -> orders;
+    auth -> db;
+    users -> db;
+    orders -> db;
+    orders -> cache;
+};
+
 basic_system -> sugiyama_system: "Compare";
+sugiyama_system -> graphviz_system: "Compare";
 ```
 
 *Source: [component_layout_engines.orr](https://github.com/orreryworks/orrery/blob/main/examples/component_layout_engines.orr)*

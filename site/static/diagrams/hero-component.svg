@@ -1,93 +1,93 @@
-<svg height="396.885" viewBox="0 0 1173.4061 396.885" width="1173.4061" xmlns="http://www.w3.org/2000/svg">
+<svg height="926.7025" viewBox="0 0 596.41125 926.7025" width="596.41125" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <marker id="arrow-right-black" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M 0 0 L 10 5 L 0 10 z" fill="black" fill-opacity="1"/>
 </marker>
 </defs>
-<g transform="translate(50, 50)">
+<g transform="translate(49.99562, 50.00125)">
 <g>
 <g>
 <g data-layer="content">
-<g id="component-group">
-<rect fill="rgb(255, 248.00002, 240.00002)" fill-opacity="1" height="294.885" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="305.11493" x="78.121" y="1"/>
-<g transform="translate(333.23593, 11)">
-<path d="M 8 0 L 40 0 L 40 30 L 8 30 L 8 24 L 12 24 L 12 18 L 8 18 L 8 12 L 12 12
-            L 12 6 L 8 6 L 8 0 Z M 0 6 L 0 12 L 12 12 L 12 6 L 0 6 Z M 0 18 L 0 24 L 12 24 L 12 18 L 0 18 Z" fill="rgb(255, 248.00002, 240.00002)" fill-opacity="1" fill-rule="evenodd" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
-</g>
-</g>
 <g id="actor-group">
-<circle cx="21.0605" cy="6" fill="white" fill-opacity="1" r="8" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
-<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="21.0605" x2="21.0605" y1="14" y2="34"/>
-<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="21.0605" x2="9.060499" y1="20" y2="28"/>
-<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="21.0605" x2="33.0605" y1="20" y2="28"/>
-<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="21.0605" x2="11.060499" y1="34" y2="52"/>
-<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="21.0605" x2="31.0605" y1="34" y2="52"/>
+<circle cx="248.21" cy="5.998749" fill="white" fill-opacity="1" r="8" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="248.21" x2="248.21" y1="13.998749" y2="33.99875"/>
+<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="248.21" x2="236.21" y1="19.998749" y2="27.998749"/>
+<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="248.21" x2="260.21002" y1="19.998749" y2="27.998749"/>
+<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="248.21" x2="238.21" y1="33.99875" y2="51.99875"/>
+<line stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" x1="248.21" x2="258.21002" y1="33.99875" y2="51.99875"/>
 </g>
-<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="178.67294" x="893.73315" y="1"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="178.67294" x="158.87354" y="732.7587"/>
 <g id="component-group">
-<rect fill="rgb(240.00002, 245.00002, 255)" fill-opacity="1" height="164.9425" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="436.4972" x="420.2359" y="1"/>
-<g transform="translate(806.7331, 11)">
+<rect fill="rgb(240.00002, 245.00002, 255)" fill-opacity="1" height="313.8825" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="288.45746" x="103.98128" y="362.87875"/>
+<g transform="translate(342.43872, 372.87875)">
 <path d="M 8 0 L 40 0 L 40 30 L 8 30 L 8 24 L 12 24 L 12 18 L 8 18 L 8 12 L 12 12
             L 12 6 L 8 6 L 8 0 Z M 0 6 L 0 12 L 12 12 L 12 6 L 0 6 Z M 0 18 L 0 24 L 12 24 L 12 18 L 0 18 Z" fill="rgb(240.00002, 245.00002, 255)" fill-opacity="1" fill-rule="evenodd" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
 </g>
 </g>
+<g id="component-group">
+<rect fill="rgb(255, 248.00002, 240.00002)" fill-opacity="1" height="164.9425" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="494.41122" x="1.0043945" y="141.93875"/>
+<g transform="translate(445.41562, 151.93875)">
+<path d="M 8 0 L 40 0 L 40 30 L 8 30 L 8 24 L 12 24 L 12 18 L 8 18 L 8 12 L 12 12
+            L 12 6 L 8 6 L 8 0 Z M 0 6 L 0 12 L 12 12 L 12 6 L 0 6 Z M 0 18 L 0 24 L 12 24 L 12 18 L 0 18 Z" fill="rgb(255, 248.00002, 240.00002)" fill-opacity="1" fill-rule="evenodd" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+</g>
+</g>
 </g>
 <g data-layer="arrow">
-<path d="M 42.121 54.017803 L 77.120995 71.5449" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
-<path d="M 384.23593 123.97788 L 419.2359 118.40172" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
-<path d="M 857.7331 60.565594 L 892.73315 56.909016" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 248.21 86.94125 L 248.21 140.93875" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 248.21 307.88126 L 248.21 361.87875" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 248.21 677.7612 L 248.21 731.7587" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 </g>
 <g data-layer="text">
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="230.67847" y="-10.471251">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="248.21" y="51.5275">
 
-<tspan dy="22.942501" x="230.67847">frontend</tspan>
+<tspan dy="22.942501" x="248.21">User</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="21.0605" y="51.52875">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="248.21" y="756.2875">
 
-<tspan dy="22.942501" x="21.0605">User</tspan>
+<tspan dy="22.942501" x="248.21">PostgreSQL</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="983.06964" y="24.528751">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="248.21" y="351.4075">
 
-<tspan dy="22.942501" x="983.06964">PostgreSQL</tspan>
+<tspan dy="22.942501" x="248.21">backend</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="638.4845" y="-10.471251">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="248.21" y="130.4675">
 
-<tspan dy="22.942501" x="638.4845">backend</tspan>
+<tspan dy="22.942501" x="248.21">frontend</tspan>
 </text>
 </g>
 </g>
-<g transform="translate(479.2359, 35)">
+<g transform="translate(162.98126, 396.87875)">
 <g data-layer="content">
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="166.45747" x="1" y="1"/>
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="111.03972" x="204.45746" y="1"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="166.45747" x="1.0002594" y="0.9987488"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="111.03972" x="28.709137" y="149.93875"/>
 </g>
 <g data-layer="arrow">
-<path d="M 168.45747 47.471252 L 203.45746 47.471252" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 84.229 94.94125 L 84.229 148.93875" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 </g>
 <g data-layer="text">
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="84.22874" y="24.528751">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="84.229" y="24.5275">
 
-<tspan dy="22.942501" x="84.22874">API Server</tspan>
+<tspan dy="22.942501" x="84.229">API Server</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="259.97733" y="24.528751">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="84.229" y="173.4675">
 
-<tspan dy="22.942501" x="259.97733">Auth</tspan>
+<tspan dy="22.942501" x="84.229">Auth</tspan>
 </text>
 </g>
 </g>
-<g transform="translate(137.121, 35)">
+<g transform="translate(60.004395, 175.93875)">
 <g data-layer="content">
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="183.11493" x="1" y="1"/>
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="151.69954" x="16.707695" y="130.9425"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="183.11493" x="0.99853516" y="0.9987488"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="151.69954" x="221.71024" y="0.9987488"/>
 </g>
 <g data-layer="text">
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="92.557465" y="24.528751">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="92.556" y="24.5275">
 
-<tspan dy="22.942501" x="92.557465">Admin Panel</tspan>
+<tspan dy="22.942501" x="92.556">Admin Panel</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="92.557465" y="154.47125">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="297.56" y="24.5275">
 
-<tspan dy="22.942501" x="92.557465">Web App</tspan>
+<tspan dy="22.942501" x="297.56">Web App</tspan>
 </text>
 </g>
 </g>

@@ -46,7 +46,7 @@ Component diagrams support:
 - All [shape types](components.md) (Rectangle, Oval, Component, Actor, Entity, Control, Interface, Boundary)
 - [Nesting](components.md#nesting) components inside other components
 - [Embedded diagrams](#embedded-diagrams) inside components
-- Layout engines: `basic` (default) and `sugiyama`
+- [Layout engines](#layout-engines): `basic`, `sugiyama`, and `graphviz`
 
 ## Sequence diagrams
 
@@ -85,16 +85,19 @@ api -> db;
 | Attribute | Type | Description | Applies to |
 |-----------|------|-------------|------------|
 | `background_color` | [`color`](styling.md#colors) | Background color of the diagram | Both |
-| `layout_engine` | string | Layout algorithm: `"basic"` or `"sugiyama"` | Both (sugiyama only for component) |
+| `layout_engine` | string | Layout algorithm: `"basic"`, `"sugiyama"`, or `"graphviz"` | Both (sugiyama/graphviz only for component) |
 
 These can also be set in the [configuration file](../cli/configuration.md) as defaults.
 
 ## Layout engines
 
-Orrery supports two layout engines for positioning elements:
+Orrery supports three layout engines for positioning elements:
 
-- **`basic`** — Simple deterministic positioning. Available for both component and sequence diagrams. This is the default.
+- **`basic`** — Simple deterministic positioning. Available for both component and sequence diagrams.
 - **`sugiyama`** — Hierarchical layered layout that arranges nodes in layers to minimize edge crossings. Available for component diagrams only.
+- **`graphviz`** — Graphviz-backed layout via the external `dot` CLI, producing balanced placements with fewer edge crossings on non-trivial graphs. Available for component diagrams only. Requires the `graphviz` Cargo feature (enabled by default in the CLI binary) and a [Graphviz](https://graphviz.org/) installation.
+
+The default engine depends on how the binary was built: `graphviz` when the `graphviz` Cargo feature is enabled (the CLI default), otherwise `basic`. See [Configuration — Priority](../cli/configuration.md#priority) for the full resolution order.
 
 ```orrery
 diagram component [background_color="#f5f5f5"];
@@ -133,7 +136,25 @@ sugiyama_view as "Sugiyama Layout": Rectangle embed {
     users -> db;
 };
 
+graphviz_view as "Graphviz Layout": Rectangle embed {
+    diagram component [layout_engine="graphviz", background_color="#ffffff"];
+
+    type Service = Rectangle [fill_color="#e6f3ff", rounded=5];
+    type Database = Rectangle [fill_color="#e0f0e0", rounded=10];
+
+    gw as "Gateway": Service;
+    auth as "Auth": Service;
+    users as "Users": Service;
+    db as "DB": Database;
+
+    gw -> auth;
+    gw -> users;
+    auth -> db;
+    users -> db;
+};
+
 basic_view -> sugiyama_view: "Compare";
+sugiyama_view -> graphviz_view: "Compare";
 ```
 
 ## Embedded diagrams

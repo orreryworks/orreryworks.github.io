@@ -163,15 +163,20 @@ See [Relations](../reference/relations.md) for styling and typed relations.
 
 ## Layout engines
 
-Component diagrams support two layout engines:
+Component diagrams support three layout engines:
 
 ```orrery-norender
-// Default: basic positioning
-diagram component;
+// Simple deterministic positioning
+diagram component [layout_engine="basic"];
 
 // Hierarchical layout (better for layered architectures)
 diagram component [layout_engine="sugiyama"];
+
+// Graphviz layout (balanced placement, fewer crossings on complex graphs)
+diagram component [layout_engine="graphviz"];
 ```
+
+The CLI binary defaults to `graphviz`, which delegates positioning to the external `dot` CLI (requires [Graphviz](https://graphviz.org/) installed — see [Installation](../getting-started/installation.md#optional-dependencies) for setup). If built without the `graphviz` feature, the default is `basic`.
 
 The layout engine can also be set in a [configuration file](../cli/configuration.md).
 
