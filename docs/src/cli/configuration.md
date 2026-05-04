@@ -33,15 +33,16 @@ Default layout engines for each diagram type.
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| `component` | string | `"basic"` | Layout engine for component diagrams |
+| `component` | string | `"graphviz"` if the feature is enabled, else `"basic"` | Layout engine for component diagrams |
 | `sequence` | string | `"basic"` | Layout engine for sequence diagrams |
 
 Available layout engines:
 
-| Value | Diagram types | Description |
-|-------|--------------|-------------|
-| `"basic"` | Component, Sequence | Simple deterministic positioning |
-| `"sugiyama"` | Component only | Hierarchical layered layout |
+| Value | Diagram types | Description | Requirement |
+|-------|--------------|-------------|-------------|
+| `"basic"` | Component, Sequence | Simple deterministic positioning | Always available |
+| `"sugiyama"` | Component only | Hierarchical layered layout | Always available |
+| `"graphviz"` | Component only | Graphviz-backed layout via `dot` CLI | `graphviz` Cargo feature + [Graphviz](https://graphviz.org/) installed |
 
 ### `[style]`
 
@@ -62,7 +63,7 @@ When the same setting is specified in multiple places, Orrery uses this preceden
 
 1. `layout_engine` attribute in the diagram declaration
 2. Default in configuration file
-3. Built-in default (`"basic"`)
+3. Built-in default (`"graphviz"` when the `graphviz` Cargo feature is enabled, otherwise `"basic"`)
 
 ### Background color
 

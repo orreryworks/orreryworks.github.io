@@ -31,4 +31,22 @@ You should see the version number printed. If the command is not found, ensure `
 ## Requirements
 
 - Rust 1.88 or later (for building from source)
-- No runtime dependencies — Orrery is a single static binary
+
+## Optional dependencies
+
+The CLI binary ships with the `graphviz` layout engine enabled by default. To use it, install [Graphviz](https://graphviz.org/) so that the `dot` command is available on your `PATH`:
+
+| Platform | Command |
+|----------|---------|
+| macOS | `brew install graphviz` |
+| Ubuntu/Debian | `sudo apt install graphviz` |
+| Fedora | `sudo dnf install graphviz` |
+| Windows | `winget install graphviz` |
+
+If you don't need the Graphviz engine, you can install without it:
+
+```bash
+cargo install orrery-cli --no-default-features
+```
+
+This builds a binary that uses only the `basic` and `sugiyama` layout engines with no external dependencies.

@@ -1,4 +1,4 @@
-<svg height="537.5378" viewBox="0 0 1360.6038 537.5378" width="1360.6038" xmlns="http://www.w3.org/2000/svg">
+<svg height="847.9489" viewBox="0 0 739.6019 847.9489" width="739.6019" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <clipPath id="clip-layer-0">
 <rect height="365.53778" width="567.60187" x="0" y="12.528748"/>
@@ -9,58 +9,63 @@
 <path d="M 0 0 L 10 5 L 0 10 z" fill="black" fill-opacity="1"/>
 </marker>
 </defs>
-<g transform="translate(50, 62.528748)">
+<g transform="translate(50.000946, 62.527634)">
 <g>
 <g>
 <g data-layer="content">
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="190.85919" x="1" y="1"/>
-<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="183.13441" x="1076.4692" y="1"/>
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="435.53778" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="637.60187" x="355.85263" y="-11.528748"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="435.53778" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="637.60187" x="0.99905396" y="-11.527634"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="183.13441" x="154.23279" y="492.53876"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="5" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="190.85919" x="224.37039" y="641.47876"/>
 </g>
 <g data-layer="arrow">
-<path d="M 192.85919 73.94891 L 354.85263 118.42912" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
-<path d="M 994.45447 103.32934 L 1075.4692 77.25907" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
-<path d="M 1075.4692 47.471252 L 192.85919 47.471252" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 319.8 640.47876 L 319.8 425.01013" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 271.1509 425.01013 L 256.3565 491.53876" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+<path d="M 269.38583 586.48126 L 296.21417 640.47876" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
+</g>
+<g data-layer="text_background">
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="131.99341" x="253.80328" y="521.2732"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="51.01471" x="238.24637" y="446.8032"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="113.09546" x="226.25226" y="602.0087"/>
 </g>
 <g data-layer="text">
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="96.429596" y="24.528751">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="319.8" y="-22.998884">
 
-<tspan dy="22.942501" x="96.429596">Merchant API</tspan>
+<tspan dy="22.942501" x="319.8">Payment Processor</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1168.0365" y="24.528751">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="245.8" y="516.0675">
 
-<tspan dy="22.942501" x="1168.0365">Bank Ledger</tspan>
+<tspan dy="22.942501" x="245.8">Bank Ledger</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="674.65356" y="-22.999998">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="319.8" y="665.0075">
 
-<tspan dy="22.942501" x="674.65356">Payment Processor</tspan>
+<tspan dy="22.942501" x="319.8">Merchant API</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="273.8559" y="73.24652">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="319.8" y="509.80194">
 
-<tspan dy="22.942501" x="273.8559">Charge $42.00</tspan>
+<tspan dy="22.942501" x="319.8">Charge $42.00</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="1034.9619" y="67.3517">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="263.75372" y="435.33194">
 
-<tspan dy="22.942501" x="1034.9619">Settle</tspan>
+<tspan dy="22.942501" x="263.75372">Settle</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="634.1642" y="24.528751">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="282.8" y="590.5375">
 
-<tspan dy="22.942501" x="634.1642">Confirmation</tspan>
+<tspan dy="22.942501" x="282.8">Confirmation</tspan>
 </text>
 </g>
 </g>
 </g>
-<g clip-path="url(#clip-layer-0)" transform="translate(389.85263, 9.942505)">
+<g clip-path="url(#clip-layer-0)" transform="translate(34.999054, 9.943619)">
 <g>
 <g data-layer="lifeline">
-<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="287.6828" x2="287.6828" y1="107.47125" y2="378.06653"/>
-<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="73.703354" x2="73.703354" y1="107.47125" y2="378.06653"/>
 <line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="501.66223" x2="501.66223" y1="107.47125" y2="378.06653"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="73.703354" x2="73.703354" y1="107.47125" y2="378.06653"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="287.6828" x2="287.6828" y1="107.47125" y2="378.06653"/>
 </g>
 <g data-layer="content">
-<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="125.45671" x="224.95444" y="13.528748"/>
-<rect fill="rgb(255, 243.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="145.40671" x="1" y="13.528748"/>
 <rect fill="rgb(240.00002, 230.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="129.87923" x="436.72263" y="13.528748"/>
+<rect fill="rgb(255, 243.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="145.40671" x="1" y="13.528748"/>
+<rect fill="rgb(224.00002, 240.00002, 224.00002)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="125.45671" x="224.95444" y="13.528748"/>
 </g>
 <g data-layer="fragment">
 <rect fill="none" height="117.23901" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="253.97943" x="267.6828" y="207.88501"/>
@@ -72,18 +77,24 @@
 <path d="M 501.66223 298.65277 L 287.6828 298.65277" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 <path d="M 287.6828 351.59528 L 73.703354 351.59528" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 </g>
+<g data-layer="text_background">
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="46.572723" x="157.40672" y="169.9425"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="64.31146" x="362.51678" y="249.23901"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="33.25647" x="378.04428" y="287.18152"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="56.54773" x="152.41922" y="340.12402"/>
+</g>
 <g data-layer="text">
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="287.6828" y="37.0575">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="501.66223" y="37.0575">
 
-<tspan dy="22.942501" x="287.6828">ledger</tspan>
+<tspan dy="22.942501" x="501.66223">notifier</tspan>
 </text>
 <text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="73.703354" y="37.0575">
 
 <tspan dy="22.942501" x="73.703354">validator</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="501.66223" y="37.0575">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="287.6828" y="37.0575">
 
-<tspan dy="22.942501" x="501.66223">notifier</tspan>
+<tspan dy="22.942501" x="287.6828">ledger</tspan>
 </text>
 <text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="298.2941" y="202.70801">
 

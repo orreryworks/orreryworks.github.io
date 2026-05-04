@@ -8,16 +8,16 @@
 <g>
 <g>
 <g data-layer="lifeline">
-<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="699.54004" x2="699.54004" y1="107.47125" y2="633.1066"/>
 <line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="900.2734" x2="900.2734" y1="107.47125" y2="633.1066"/>
-<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="412.01447" x2="412.01447" y1="107.47125" y2="633.1066"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="699.54004" x2="699.54004" y1="107.47125" y2="633.1066"/>
 <line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="97.145454" x2="97.145454" y1="112.22279" y2="633.1066"/>
+<line fill-opacity="1" stroke="black" stroke-dasharray="5,5" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" x1="412.01447" x2="412.01447" y1="107.47125" y2="633.1066"/>
 </g>
 <g data-layer="content">
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="150.94946" x="624.0653" y="13.528748"/>
 <rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="146.51721" x="827.0148" y="13.528748"/>
-<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="162.79477" x="330.61707" y="13.528748"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="150.94946" x="624.0653" y="13.528748"/>
 <ellipse cx="97.145454" cy="60" fill="white" rx="96.145454" ry="51.222797" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2"/>
+<rect fill="rgb(230.00002, 243.00002, 255)" fill-opacity="1" height="92.942505" rx="0" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="2" width="162.79477" x="330.61707" y="13.528748"/>
 </g>
 <g data-layer="activation">
 <rect fill="white" fill-opacity="1" height="400.7185" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" width="8" x="408.01447" y="190.91685"/>
@@ -42,22 +42,32 @@
 <path d="M 699.54004 553.6929 L 416.01447 553.6929" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 <path d="M 408.01447 591.6354 L 97.145454 591.6354" fill="none" marker-end="url(#arrow-right-black)" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1"/>
 </g>
+<g data-layer="text_background">
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="102.019714" x="203.5701" y="179.44559"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="108.65344" x="503.4505" y="217.38809"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="85.381714" x="515.08636" y="296.6846"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="65.43176" x="625.42804" y="334.6271"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="92.02527" x="612.1313" y="372.5696"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="115.32617" x="194.91687" y="468.45462"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="104.25046" x="505.652" y="542.2216"/>
+<rect fill="rgba(255, 255, 255, 0.85)" fill-opacity="0.85" height="22.942505" rx="3" width="106.4422" x="199.35886" y="580.1641"/>
+</g>
 <g data-layer="text">
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="699.54004" y="37.0575">
-
-<tspan dy="22.942501" x="699.54004">inventory</tspan>
-</text>
 <text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="900.2734" y="37.0575">
 
 <tspan dy="22.942501" x="900.2734">payment</tspan>
 </text>
-<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="412.01447" y="37.0575">
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="699.54004" y="37.0575">
 
-<tspan dy="22.942501" x="412.01447">Web Shop</tspan>
+<tspan dy="22.942501" x="699.54004">inventory</tspan>
 </text>
 <text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="97.145454" y="37.0575">
 
 <tspan dy="22.942501" x="97.145454">Customer</tspan>
+</text>
+<text dominant-baseline="central" font-family="Arial" font-size="15" text-anchor="middle" x="412.01447" y="37.0575">
+
+<tspan dy="22.942501" x="412.01447">Web Shop</tspan>
 </text>
 <text dominant-baseline="central" fill="black" fill-opacity="1" font-family="Arial" font-size="12" text-anchor="middle" x="93.57355" y="250.1536">
 
