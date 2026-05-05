@@ -33,6 +33,9 @@ jobs:
         with:
           tool: mdbook@0.5.2
 
+      - name: Install Graphviz
+        run: sudo apt-get update && sudo apt-get install -y graphviz
+
       - name: Install Orrery CLI
         run: cargo install orrery-cli --locked
 
